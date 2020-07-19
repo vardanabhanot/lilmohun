@@ -1,20 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
-    <title>Kaveel Lilmohan</title>
-</head>
-<body>
-    <header class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <title>Kaveel Lilmohun</title>
+  </head>
+  <body>
+    <section id="front">
+      <header class="header">
         <nav>
+          <div class="logo">
             <a href="/">Kaveel Lilmohun</a>
-            <a href="#" class="hamburger">
-                <i class="fa fa-bars"></i>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#front">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#author">About</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#futureprojects">Future Projects</a></li>
+            <li><a href="#contactus">Contact Us</a></li>
+          </ul>
+          <div class="burger">
+            <a href="#books">
+              <i class="fa fa-bars"></i>
             </a>
+          </div>
         </nav>
-    </header>    
-</body>
+      </header>
+      <div id="showbook" class="grid">
+        <img src="./assets/4th.png" alt="Book cover" class="bookCover" />
+        <div id="info">
+          <span id="title">Sinister Spells</span>
+          <!-- <span>Coming Soon</span> -->
+        </div>
+      </div>
+      <div class="icon-scroll">
+        <a href="#books"
+          ><i class="fa fa-chevron-down" aria-hidden="true"></i
+        ></a>
+      </div>
+    </section>
+    <section id="books">
+      <div class="grid">
+        <img src="./assets/Hardcover-book-mockup.png" class="sinBook" />
+        <div class="aboutBook">
+          <p>
+            Be kind please , no rude messages. Anyone who is kind , good and
+            friendly and really looking for friendship. If i give you my social
+            media details , please do not be scared . I am doing it to be
+            friends lol i have no money or intention to kidnap you because I
+            have you on facebook or instagram. Don't be mean to people that
+            greet with a Hi, how are you and any other variations, sometimes if
+            not always this is how people were taught to greet each other and so
+            it makes sense to do so. Some people here are shy and maybe its the
+            only way they know how to greet , if you are going to judge someone
+            just off that and not give them a chance to get to know them then I
+            am sorry , you cant be such a nice person yourself.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="author">
+      <div class="aboutAuthor">
+        <h1 class="authorName">Kaveel LilMohun</h1>
+        <p class="kaveelInfo">
+        Also by race I am Indian, Indians have been in South Africa for 159
+        years(2019) so lol yeah and I dont live in the UK , I have a story as to
+        why i put that there and I will be happy to explain it to you. Friends
+        who have had me on interpal and who have me on my social networks please
+        do add me again here. I am here for friendships that go beyond this
+        site, because I am here for real friendship, not to chat as strangers
+        forever. I understand if you need time before adding me to social
+        networks but if months are gone and you still dont trust me than you
+        probably never will so ...</p>
+      </div>
+    </section>
+    <section id="faq">
+      <h1>FAQ</h1>
+    </section>
+    <section id="futureprojects">
+      <p>Futurte Projects</p>
+    </section>
+    <section id="contactus">
+      <div>
+        <div class="formInputs">
+          <h1>Contact Us</h1>
+          <form action="mailto:bhanotvardana@gmail.com" method="GET">
+            <input type="email" placeholder="Email" name="email" />
+            <input type="text" placeholder="Name" name="name" />
+            <textarea
+              placeholder="Enter your description here"
+              name="message"
+            ></textarea>
+            <button type="submit" class="formButton">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div id="footer">
+      <h3>Kaveel LilMohun Copyright 2020</h3>
+    </div>
+  </body>
 </html>
