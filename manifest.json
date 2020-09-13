@@ -1,12 +1,13 @@
 {
   "name": "Kaveel Lilmohun",
   "short_name": "Kaveel",
-  "lang": "en-UK",
-  "start_url": "/",
-  "scope": "/",
-  "display": "standalone",
   "theme_color": "#1b1b1b",
-  "background" : "#1b1b1b",
+  "background_color": "#1b1b1b",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+
   "icons": [
     {
       "src": "./assets/kaveel.webp",
