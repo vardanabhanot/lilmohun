@@ -1,18 +1,32 @@
 {
-  "name": "Kaveel Lilmohun",
-  "short_name": "Kaveel",
-  "theme_color": "#1b1b1b",
-  "background_color": "#1b1b1b",
-  "display": "standalone",
-  "orientation": "portrait",
-  "scope": "/",
-  "start_url": "/",
-
-  "icons": [
-    {
-      "src": "./assets/kaveel.webp",
-      "sizes": "260x280",
-      "type": "image/webp"
-    }
-  ]
+    "theme_color": "#070707",
+    "background_color": "#1b1b1b",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "app_name": "Kaveel Lilmohun",
+    "short_name": "Kaveel",
+    "description": "",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x",
+            "type": "image/png"
+        }
+    ]
 }
