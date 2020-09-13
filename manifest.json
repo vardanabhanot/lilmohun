@@ -1,0 +1,13 @@
+{
+  "name": "Kaveel Lilmohun",
+  "short_name": "Kaveel",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1b1b1b",
+  "icons": [
+    {
+      "src": "https://image.shutterstock.com/image-vector/kl-letter-logo-k-l-260nw-1295698039.jpg"
+    }
+  ]
+}

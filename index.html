@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="keywords" content="books, horror books, e-books">
-  <meta name="description" content="KaveelLilMohun is a writer who usually write about horror books, His latest creation is SINISTER SPELLS.">
+  <meta name="description"
+    content="KaveelLilMohun is a writer who usually write about horror books, His latest creation is SINISTER SPELLS.">
   <meta property=”og:title” content=”KaveelLilMohun” />
   <meta property=”og:url” content=”https://kaveellilmohun.com” />
   <meta property=”og:company” content=”website” />
@@ -15,6 +16,21 @@
   <link rel="stylesheet" type="text/css" href="./styles.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Kaveel">
+  <meta name="apple-mobile-web-app-title" content="Kaveel">
+  <meta name="theme-color" content="#1b1b1b">
+  <meta name="msapplication-navbutton-color" content="#1b1b1b">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" href="https://image.shutterstock.com/image-vector/kl-letter-logo-k-l-260nw-1295698039.jpg">
+  <link rel="apple-touch-icon"
+    href="https://image.shutterstock.com/image-vector/kl-letter-logo-k-l-260nw-1295698039.jpg">
   <title>Kaveel Lilmohun</title>
 </head>
 
@@ -262,5 +278,13 @@
   </div>
 </body>
 <script src="./app.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./service-worker.js")
+          .then((reg) => console.log("service worker registered", reg))
+          .catch((err) => console.log("service worker not regeistered", err));
+      }
+    </script>
 
 </html>
