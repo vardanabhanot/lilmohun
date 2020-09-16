@@ -36,7 +36,10 @@ body {
 #wrapper {
   margin: 0;
   padding: 0;
+  right: 0;
   position: absolute;
+  z-index: 2;
+  transition: all 0.8s;
 }
 
 a {
@@ -59,6 +62,8 @@ a {
 
 
 /*modals for Mobile and PC*/
+
+/*modal for mobile,slideup*/
 #buyNowMobile {
   display: none;
   width: 100%;
@@ -78,7 +83,6 @@ a {
   0% {
     bottom: -60%;
     opacity: 0;
-
   }
 
   100% {
@@ -108,29 +112,33 @@ a {
   align-items: center;
   padding: 0px 0
 }
+/*end of mobile buy modal slideup*/
 
 
-#buyNowPC {}
+#buyNowPC {
+  /*maybe i will change it*/
+  display: none;
+}
 
-/* mobile 640px */
+/* --------------------mobile 640px  starts here-----------------------*/
 
 
 /*mobile menu*/
 #mobileMenu {
-  display: none;
+  display: block;
   position: absolute;
-  overflow-x: hidden;
   background-color: black;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   right: 0;
-  height: 200%;
-  width: 80%;
+  height: 100vh;
+  width: 80vw;
 }
+/*mobile menu ends here*/
 
 
-
-/*header */
+/*header*/
+/*pc navigation starts here*/
 nav {
   display: flex;
   padding: 10px 0px;
@@ -170,6 +178,8 @@ nav {
   padding: 20px;
   font-family: Bloody;
 }
+/*pc nav ends here*/
+/*header*/
 
 section {
   padding: 0 10px;
@@ -324,10 +334,7 @@ section {
 }
 
 .aboutBook p {
-  text-align: justify;
-  /* font-size: 1em;
-  line-height: 1.4;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 /*About Author */
@@ -411,7 +418,9 @@ section {
   color: white;
 }
 
-#futureprojects h1 {}
+#futureprojects h1 {
+  font-size: 1.2em;
+}
 
 /*Contact Us Section*/
 #contactus {

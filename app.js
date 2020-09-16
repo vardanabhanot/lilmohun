@@ -35,32 +35,21 @@ buyNow.addEventListener("click", () => {
 const burger = document.querySelector('.burger');
 const mobileMenu = document.querySelector('#mobileMenu');
 const wrapper = document.querySelector('#wrapper');
-const mobileMenuStyle = getComputedStyle(mobileMenu);
+const mobileMenuStyle = getComputedStyle(wrapper);
 
 burger.addEventListener("click", (evt) => {
-
-  if (mobileMenuStyle.display === "none") {
-    var twentypercent = `${(screen.width/100)*20}`
-    var change = `${screen.width - twentypercent}`;
-    
-    wrapper.style.right = `${change}px`;
-    mobileMenu.style.display = "block";
-    mobileMenu.style.left = `${twentypercent}px`;
-    mobileMenu.style.transition = 'all .5s';
-    wrapper.style.transition = 'all .1s';
-
-  } else {
-    wrapper.style.transition = 'all .8s';
-    mobileMenu.style.transition = 'all .7s';
-    mobileMenu.style.display = "none";
-    wrapper.style.right = "0";
+  var twentypercent = `${(screen.width/100)*20}`
+  var change = `${screen.width - twentypercent}px`;
+  if (mobileMenuStyle.right === "0px") {  
+    wrapper.style.right = `${change}`;
+  } else{
+    wrapper.style.right = "0px";   
   }
   evt.preventDefault();
 });
 
 mobileMenu.addEventListener("click",(evt) =>{
   if(evt.target.href){
-    mobileMenu.style.display = "none";
     wrapper.style.right = "0";
   }
 })
