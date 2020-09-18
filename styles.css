@@ -14,14 +14,21 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {
   padding: 0;
   margin: 0;
 }
 
 p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  line-height: 1.556em;
+  letter-spacing: 0;
+  font-weight: 100;
+  font-style: normal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 body {
@@ -94,10 +101,12 @@ a {
 #buyNowMobile .buyMobileContent {
   padding: 20px;
 }
-#buyNowMobile a:link{
+
+#buyNowMobile a:link {
   color: black;
 }
-#buyNowMobile a:visited{
+
+#buyNowMobile a:visited {
   color: red;
 }
 
@@ -112,6 +121,7 @@ a {
   align-items: center;
   padding: 0px 0
 }
+
 /*end of mobile buy modal slideup*/
 
 
@@ -134,6 +144,7 @@ a {
   height: 100vh;
   width: 80vw;
 }
+
 /*mobile menu ends here*/
 
 
@@ -178,6 +189,7 @@ nav {
   padding: 20px;
   font-family: Bloody;
 }
+
 /*pc nav ends here*/
 /*header*/
 
@@ -329,13 +341,11 @@ section {
   grid-column: (1/9);
   grid-row: 2;
   box-sizing: border-box;
-  padding: 0 46px 0 46px;
+  padding: 0 30px 0 30px;
   margin: 0 0 20px 0;
 }
 
-.aboutBook p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
-}
+
 
 /*About Author */
 #author {
@@ -343,16 +353,17 @@ section {
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  box-sizing: border-box;
   background-size: cover;
-  height: 100vh;
+  height: unset;
   color: white;
 }
 
 .aboutAuthor {
   display: flex;
-  padding: 40px;
+  padding: 20px;
   flex-direction: column;
-  justify-content: center;
+
 }
 
 .authorName {
@@ -410,16 +421,18 @@ section {
 
 /*Future Project Section*/
 #futureprojects {
-  height: 100vh;
+  height: unset;
   background: url("./assets/crows.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   color: white;
+  padding: 30px;
 }
 
 #futureprojects h1 {
-  font-size: 1.2em;
+  font-size: 2.5em;
+  font-family: Bloody;
 }
 
 /*Contact Us Section*/
@@ -481,6 +494,10 @@ textarea {
 }
 
 @media only screen and (min-width: 960px) {
+
+  p{
+    font-size: 1.1em;
+  }
   .logo {
     font-size: 1.8em;
   }
@@ -540,12 +557,15 @@ textarea {
   .sinBook {
     grid-column: 1/4;
     width: 70vh;
+    grid-row: 1;
     margin: auto;
   }
 
   .aboutBook {
     grid-column: 4/9;
-    font-size: 1.5em;
+    grid-row: 1;
+    margin: auto;
+    margin-right: 50px;
   }
 
   .formInputs {
@@ -555,12 +575,20 @@ textarea {
   }
 
   /*About Author Section*/
-  .kaveelInfo {
+  #author{
+    height: 100vh;
+    padding: 0 10% 0 10%;
+  }
+  .aboutAuthor p{
     font-size: 1.5em;
   }
 
   .authorName {
     padding: 20px;
     font-size: 4.5em;
+  }
+
+  #futureprojects{
+    height: 100vh;
   }
 }
