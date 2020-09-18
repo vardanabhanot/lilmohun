@@ -2,7 +2,7 @@
     "theme_color": "#070707",
     "background_color": "#1b1b1b",
     "display": "standalone",
-    "scope": "/",
+    "scope": "./",
     "start_url": "./index.html",
     "name": "Kaveel Lilmohun",
     "short_name": "Kaveel",
