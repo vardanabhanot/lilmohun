@@ -357,18 +357,31 @@ section {
   background-size: cover;
   height: unset;
   color: white;
-}
-
-.aboutAuthor {
-  display: flex;
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(8, 1fr);
   padding: 20px;
-  flex-direction: column;
+}
+
+#aboutAuthorImg{
+  grid-column: 1/9;
+  grid-row: 2;
+  box-sizing: border-box;
+  margin: 30px auto;
+}
+.aboutAuthor {
+  grid-column: 1/9;
+  grid-row: 3;
+  box-sizing: border-box;
 
 }
+
+
 
 .authorName {
-  display: flex;
-  justify-content: center;
+  grid-column: 1/9;
+  grid-row: 1;
+  margin: 20px auto;
   padding: 10px 0;
   font-size: 2.5em;
   font-family: Bloody;
@@ -496,7 +509,7 @@ textarea {
 @media only screen and (min-width: 960px) {
 
   p{
-    font-size: 1.1em;
+    font-size: 1.5em;
   }
   .logo {
     font-size: 1.8em;
@@ -578,6 +591,22 @@ textarea {
   #author{
     height: 100vh;
     padding: 0 10% 0 10%;
+  }
+  .authorName {
+    grid-column: 1/9;
+    grid-row: 1;
+    padding: 20px;
+    font-size: 4.5em;
+  }
+  #aboutAuthorImg{
+    margin:auto 0;
+    grid-column: 6/9;
+    grid-row: 2;
+  }
+  .aboutAuthor{
+    margin: 0;
+    grid-column: 1/6;
+    grid-row: 2;
   }
   .aboutAuthor p{
     font-size: 1.5em;
