@@ -40,6 +40,7 @@ const mobileMenuStyle = getComputedStyle(wrapper);
 burger.addEventListener("click", (evt) => {
   var twentypercent = `${(screen.width/100)*20}`
   var change = `${screen.width - twentypercent}px`;
+  mobileMenu.style.display = "block";
   if (mobileMenuStyle.right === "0px") {  
     wrapper.style.right = `${change}`;
   } else{
