@@ -3,10 +3,10 @@ const readMoreText = document.querySelector('.readMore');
 const readMoreIcon = document.querySelector('.readMoreIcon');
 
 
-readMore.addEventListener('mouseover', () => {
-  readMoreIcon.style.display = 'none';
-  readMoreText.stype.display = 'block';
-});
+// readMore.addEventListener('mouseover', () => {
+//   readMoreIcon.style.display = 'none';
+//   readMoreText.stype.display = 'block';
+// });
 
 
 var coll = document.getElementsByClassName("collapsible");
