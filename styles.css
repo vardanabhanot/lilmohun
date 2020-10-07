@@ -42,14 +42,12 @@ body {
 }
 
 #wrapper {
-  position: relative;
   margin: 0;
   padding: 0;
   right: 0;
   position: absolute;
   z-index: 2;
   transition: all 0.8s;
-  overflow-x: hidden;
 }
 
 a {
@@ -215,18 +213,18 @@ section {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.5fr 0.5fr;
-  gap: 10px;
-  justify-content: center;
 }
 
 #showbook {
-  text-align: center;
   margin-top: 35px;
 }
 
 #info {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 20px auto;
+  padding: 0;
 }
 
 .bookCover {
@@ -236,22 +234,19 @@ section {
 }
 
 #title {
-  display: block;
   font-family: October Crow;
   font-size: 3.2em;
   font-weight: 900;
   margin-top: 5px;
   color: #b60d0d;
   text-shadow: 2px 4px 2px rgba(245, 185, 185, 0.05);
+  padding:0;
 }
 
 #series {
-  display: block;
   font-size: 1.6em;
   font-family: October Crow;
-  height: 20px;
   color: white;
-  margin-left: -170px;
 }
 
 .icon-scroll {
@@ -327,13 +322,10 @@ section {
 /* Books Section*/
 #books {
   background: white;
-  display: grid;
   box-sizing: border-box;
-  grid-template-columns: repeat(8, 1fr);
   height: unset;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 .mobilesinBook {
@@ -350,8 +342,6 @@ section {
 }
 
 .aboutBook {
-  grid-column: 1/9;
-  grid-row: 2;
   box-sizing: border-box;
   padding: 0 30px 0 30px;
   margin: 0 0 20px 0;
@@ -369,30 +359,22 @@ section {
   background-size: cover;
   height: unset;
   color: white;
-  display: grid;
   box-sizing: border-box;
-  grid-template-columns: repeat(8, 1fr);
   padding: 30px;
   overflow-x: hidden;
 }
 
 #aboutAuthorImg{
-  grid-column: 1/9;
-  grid-row: 2;
   box-sizing: border-box;
   margin: 30px auto;
 }
 .aboutAuthor {
-  grid-column: 1/9;
-  grid-row: 3;
   box-sizing: border-box;
 }
 
 
 
 .authorName {
-  grid-column: 1/9;
-  grid-row: 1;
   margin: 20px auto;
   padding: 10px 0;
   font-size: 2.3em;
@@ -589,14 +571,7 @@ textarea {
 
   #title {
     font-size: 5em;
-    padding: 10px;
-    margin-left: 40px;
-  }
-
-  #title::before {
-    width: 300px;
-    margin-bottom: 10px;
-    margin-left: 0;
+    padding: 0;
   }
 
   #books {
