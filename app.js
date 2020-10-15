@@ -1,13 +1,11 @@
-const readMore = document.querySelector('.icon-scroll');
-const readMoreText = document.querySelector('.readMore');
-const readMoreIcon = document.querySelector('.readMoreIcon');
-
+const readMore = document.querySelector(".icon-scroll");
+const readMoreText = document.querySelector(".readMore");
+const readMoreIcon = document.querySelector(".readMoreIcon");
 
 // readMore.addEventListener('mouseover', () => {
 //   readMoreIcon.style.display = 'none';
 //   readMoreText.stype.display = 'block';
 // });
-
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -24,33 +22,38 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-
-const buyNow = document.querySelector('.buyNow');
-const buyNowMobile = document.querySelector('#buyNowMobile');
+const buyNow = document.querySelector(".buyNow");
+const buyNowMobile = document.querySelector("#buyNowMobile");
+const closebuyNowMob = document.querySelector("#closeBuyMob")
 
 buyNow.addEventListener("click", () => {
   buyNowMobile.style.display = "block";
-})
+});
 
-const burger = document.querySelector('.burger');
-const mobileMenu = document.querySelector('#mobileMenu');
-const wrapper = document.querySelector('#wrapper');
+closebuyNowMob.addEventListener("click", ()=>{
+  buyNowMobile.style.display = "none";
+  buyNowMobile.style.transition = "0.2s ease-out linear";
+});
+
+const burger = document.querySelector(".burger");
+const mobileMenu = document.querySelector("#mobileMenu");
+const wrapper = document.querySelector("#wrapper");
 const mobileMenuStyle = getComputedStyle(wrapper);
 
 burger.addEventListener("click", (evt) => {
-  var twentypercent = `${(screen.width/100)*20}`
+  var twentypercent = `${(screen.width / 100) * 20}`;
   var change = `${screen.width - twentypercent}px`;
   mobileMenu.style.display = "block";
-  if (mobileMenuStyle.right === "0px") {  
+  if (mobileMenuStyle.right === "0px") {
     wrapper.style.right = `${change}`;
-  } else{
-    wrapper.style.right = "0px";   
+  } else {
+    wrapper.style.right = "0px";
   }
   evt.preventDefault();
 });
 
-mobileMenu.addEventListener("click",(evt) =>{
-  if(evt.target.href){
+mobileMenu.addEventListener("click", (evt) => {
+  if (evt.target.href) {
     wrapper.style.right = "0";
   }
-})
+});
