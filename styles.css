@@ -172,12 +172,12 @@ nav {
   font-size: 1.5em;
 }
 
-.burger {
-  font-size: 1.2em;
-}
-
 .nav-links {
   display: none;
+}
+
+.burger {
+  font-size: 1.2em;
 }
 
 .nav-burger-links {
@@ -372,6 +372,16 @@ section {
   overflow-x: hidden;
 }
 
+#author h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  align-self: self-start;
+  font-size: 2.3em;
+  margin-bottom: 20px;
+  font-family: Bloody;
+}
+
 #imageAndSocial {
   display: flex;
   flex-direction: column;
@@ -380,6 +390,7 @@ section {
 
 #aboutAuthorImg {
   width: 80vw;
+  max-width: 100%;
   height: 63vh;
   align-items: center;
   border-radius: 4px;
@@ -405,14 +416,20 @@ section {
   box-sizing: border-box;
 }
 
-
-
 .authorName {
   text-align: center;
-  margin:0 0 20px 0;
+  margin: 0 0 20px 0;
   padding: 10px 0;
-  font-size: 2.3em;
+  font-size: 2.5em;
   font-family: Bloody;
+}
+.aboutAuthorHeight {
+  max-height: unset;
+  overflow-y: hidden;
+}
+
+#readMoreAuthor {
+  display: none;
 }
 
 /*FAQ Section */
@@ -424,7 +441,7 @@ section {
 }
 
 #faq h1 {
-  font-size: 2.3em;
+  font-size: 2.5em;
   font-family: Bloody;
   text-align: center;
   margin-bottom: 20px;
@@ -507,12 +524,13 @@ section {
   text-align: center;
   font-size: 2.5em;
   font-family: Bloody;
-  margin: 10px 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .futureImage {
   width: 80vw;
   height: 63vh;
+  max-width: 100%;
   border-radius: 4px;
   margin: 0 auto;
   -moz-box-shadow: 0px 2px 12px 0px rgba(255, 255, 255, 0.75);
@@ -525,7 +543,6 @@ section {
   background-color: darkslategray;
   color: white;
   padding-top: 50px;
-
 }
 
 #contactus h1 {
@@ -664,17 +681,16 @@ textarea {
   }
 
   .aboutBook {
-    grid-column: 4/9;
+    grid-column: 4/8;
     grid-row: 1;
     margin: auto;
-    margin-right: 50px;
+    padding: 0;
     max-height: 80vh;
     overflow-y: scroll;
-
   }
 
   .aboutBook::-webkit-scrollbar {
-    width: 50px;
+    width: 1px;
   }
 
   .formInputs {
@@ -685,19 +701,23 @@ textarea {
 
   /*About Author Section*/
   #author {
+    display: grid;
     height: 100vh;
-    padding: 0 10% 0 10%;
+    padding: 20px 20px;
   }
 
-  .authorName {
+  #author h1 {
     grid-column: 1/9;
-    grid-row: 1;
+    text-align: center;
+    margin: 0;
     padding: 0;
-    font-size: 4.5em;
+    font-size: 2.3em;
+    margin-bottom: 20px;
+    font-family: Bloody;
   }
 
   #imageAndSocial {
-    grid-column: 7/9;
+    grid-column: 6/8;
     grid-row: 2;
     align-self: self-start;
     margin-top: 20px;
@@ -705,25 +725,35 @@ textarea {
 
   #aboutAuthorImg {
     width: 350px;
-    height: 50vh;
-    margin: auto 0;
-
+    height: 55vh;
+    margin: auto auto;
   }
 
   .aboutAuthor {
-    margin: 0;
-    grid-column: 1/7;
+    grid-column: 2/6;
     grid-row: 2;
     align-self: self-start;
+
   }
 
-  .aboutAuthor p {
-    font-size: 1.5em;
+  .aboutAuthorHeight {
+    max-height: 42vh;
+    overflow-y: hidden;
   }
 
-  .authorName {
-    padding: 20px;
-    font-size: 4.5em;
+  .aboutAuthorHeight::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  #readMoreAuthor {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #660000;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
   }
 
   #futureprojects {
@@ -731,21 +761,22 @@ textarea {
     height: 100vh;
     padding: 20px 20px;
   }
-  #futureprojects h1{
+
+  #futureprojects h1 {
     grid-column: 1/9;
     text-align: center;
     margin: 0;
     padding: 0;
-    margin-top: 20px;
     align-self: self-start;
   }
 
-  .futureImage{
-    grid-column:1/4;
-    width: 400px;
+  .futureImage {
+    grid-column: 1/4;
+    width: 340px;
     align-self: self-start;
   }
-  .futureContent{
+
+  .futureContent {
     grid-column: 4/9;
     align-self: self-start;
     margin-right: 160px;
@@ -755,26 +786,48 @@ textarea {
     display: block;
   }
 
+  .collapseWrapper {
+    width: 65%;
+    margin: 35px auto;
+  }
+
   #mobileFaqHeading {
     display: none;
   }
+
+  #footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(20, 44, 44);
+    padding: 5px;
+    font-size: 1.1em;
+    color: white;
+  }
+
+  #footer span{
+    width: max-content;
+  }
+
 }
 
 
 @media only screen and (min-width:1920px) {
 
-  nav{
+  nav {
     font-size: 1.7em;
     background-color: rgba(0, 0, 0, 0.1);
   }
-  .logo{
+
+  .logo {
     font-size: 1.7em;
   }
-  
-  
-  #series{
+
+
+  #series {
     font-size: 2.6;
   }
+
   #title {
     font-size: 8em;
   }
@@ -789,6 +842,14 @@ textarea {
 
   .aboutAuthor {
     padding-right: 50px;
+  }
+  .aboutAuthorHeight {
+    max-height: unset;
+    overflow-y: hidden;
+  }
+  
+  #readMoreAuthor {
+    display: none;
   }
 
 

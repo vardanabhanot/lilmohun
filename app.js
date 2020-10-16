@@ -24,13 +24,13 @@ for (i = 0; i < coll.length; i++) {
 
 const buyNow = document.querySelector(".buyNow");
 const buyNowMobile = document.querySelector("#buyNowMobile");
-const closebuyNowMob = document.querySelector("#closeBuyMob")
+const closebuyNowMob = document.querySelector("#closeBuyMob");
 
 buyNow.addEventListener("click", () => {
   buyNowMobile.style.display = "block";
 });
 
-closebuyNowMob.addEventListener("click", ()=>{
+closebuyNowMob.addEventListener("click", () => {
   buyNowMobile.style.display = "none";
   buyNowMobile.style.transition = "0.2s ease-out linear";
 });
@@ -55,5 +55,26 @@ burger.addEventListener("click", (evt) => {
 mobileMenu.addEventListener("click", (evt) => {
   if (evt.target.href) {
     wrapper.style.right = "0";
+  }
+});
+
+//Read More
+
+const authorReadMore = document.querySelector("#readMoreAuthor");
+const aboutAuthorHeight = document.querySelector(".aboutAuthorHeight");
+
+authorReadMore.addEventListener("click", (e) => {
+  let maxHeight = getComputedStyle(aboutAuthorHeight);
+  if (maxHeight.maxHeight == "262.5px") {
+    aboutAuthorHeight.style.maxHeight = "63vh";
+    aboutAuthorHeight.style.overflowY = "scroll";
+    aboutAuthorHeight.style.transition = "0.3s max-height ease-out";
+    authorReadMore.textContent = "Read Less";
+  }
+  else{
+    aboutAuthorHeight.style.maxHeight = "42vh";
+    aboutAuthorHeight.style.overflowY = "hidden";
+    aboutAuthorHeight.style.transition = "0.3s max-height ease-in";
+    authorReadMore.textContent = "Read More...";
   }
 });
