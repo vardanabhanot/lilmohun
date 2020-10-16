@@ -13,7 +13,12 @@
   <meta property="og:description"
     content="KaveelLilMohun is a writer who usually write about horror books, His latest creation is SINISTER SPELLS." />
 
-  <link rel="stylesheet" type="text/css" href="./styles.css" />
+  <link rel="preload" type="text/css" href="./styles.css" as="style" />
+  <link rel="stylesheet" type="text/css" href="./styles.css" as="style" />
+  <link rel="preload" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"
+    as="style" />
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
   <link rel="manifest" href="./manifest.json">
@@ -57,7 +62,7 @@
         </nav>
       </header>
       <div id="showbook" class="grid">
-        <img src="./assets/4th.png" alt="Book cover" class="bookCover" />
+        <img src="./assets/homebookMock.webp" alt="Book cover" class="bookCover" />
         <div id="info">
           <span id="series">Lil Mo Horror</span>
           <span id="title">Sinister Spells</span>
@@ -65,8 +70,12 @@
             <a href="#books" class="readMore">Read More</a>
             <a href="#buyNowMobile" class="buyNow">Buy Now</a>
           </div>
+          <a href="#buyNowPC" id="buyButton">
+            Buy Now<i class="fa fa-arrow-right" style="transform: translateX(10px);" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
+      <div id="overlay"></div>
       <a href="#books">
         <!-- <div class="icon-scroll">
           <i class="fa fa-chevron-down readMoreIcon" aria-hidden="true"></i>
@@ -75,53 +84,57 @@
     </section>
     <section id="books" class="grid">
 
-      <img src="./assets/Hardcover-book-mockup.png" class="sinBook" alt="Book Mockup" />
-      <img src="./assets/cover.jpg" class="mobilesinBook" alt="mobile display of Book Mockup" />
+      <img src="./assets/aboutBookMockup.webp" class="sinBook" alt="Book Mockup" />
+      <img src="./assets/coverflat.webp" class="mobilesinBook" alt="mobile display of Book Mockup" />
       <div class="aboutBook">
-        <p>
-          Meet Swara, a nineteen year old teenager who has lost her best
-          friend, and secret crush. Unable to deal with her pain flees her
-          city to start life afresh in a new one.
-        </p>
-        <p>
-          Still, haunted by the memories of her lost mate, she manages to meet
-          new people, new friends and things seem to all be going fine until
-          she decides to return home for some quality time with her family.
-          Sounds pretty harmless and fun right? WRONG!
-        </p>
-        <p>
-          When Swara arrives home she is contacted by her best friend's mum,
-          Mrs. Bose who wants to hand her something. A book. A token which she
-          can hold dear and preserve Karthik's memory. Sounds like a sweet
-          gesture, till Swara pays her a visit and discovers her real plans.
-        </p>
-        <p>
-          Mrs. Bose plans to resurrect her son and all she needs is a partner
-          who believes in the cause. Someone who also had a close tie to
-          Karthik and guess who the lucky nominee is?
-        </p>
-        <p>
-          The ritual is simple ... spill some blood...chant some words...
-          nothing major right... How far would you go to bring your best
-          friend back from the dead? Are the lines between reality and fantasy
-          metres apart or closely blurred? How far can someone go to hold you
-          to promise? Swara is about to find out... and so will you.
-        </p>
+        <div style="font-size: 1.5em; padding: 0; font-weight: bold;">About Book</div>
+        <div class="aboutBookHeight">
+          <p>
+            Meet Swara, a nineteen year old teenager who has lost her best
+            friend, and secret crush. Unable to deal with her pain flees her
+            city to start life afresh in a new one.
+          </p>
+          <p>
+            Still, haunted by the memories of her lost mate, she manages to meet
+            new people, new friends and things seem to all be going fine until
+            she decides to return home for some quality time with her family.
+            Sounds pretty harmless and fun right? WRONG!
+          </p>
+          <p>
+            When Swara arrives home she is contacted by her best friend's mum,
+            Mrs. Bose who wants to hand her something. A book. A token which she
+            can hold dear and preserve Karthik's memory. Sounds like a sweet
+            gesture, till Swara pays her a visit and discovers her real plans.
+          </p>
+          <p>
+            Mrs. Bose plans to resurrect her son and all she needs is a partner
+            who believes in the cause. Someone who also had a close tie to
+            Karthik and guess who the lucky nominee is?
+          </p>
+          <p>
+            The ritual is simple ... spill some blood...chant some words...
+            nothing major right... How far would you go to bring your best
+            friend back from the dead? Are the lines between reality and fantasy
+            metres apart or closely blurred? How far can someone go to hold you
+            to promise? Swara is about to find out... and so will you.
+          </p>
+        </div>
+        <div id="readMoreBook">Read More...</div>
       </div>
     </section>
     <section id="author" class="grid">
       <h1>Kaveel LilMohun</h1>
-      <div id="imageAndSocial">
+      <div id="imageAndSocial" class="anim" data-delay="0s">
         <img src="assets/kaveelpen.jpg" id="aboutAuthorImg" />
         <div class="social">
-          <a href="https://www.facebook.com/LILMOHORROR.LILMOTHRILLER"><i class="fa fa-facebook-official"
+          <a href="https://www.facebook.com/LILMOHORROR.LILMOTHRILLER" target="_blank"><i class="fa fa-facebook-official"
               aria-hidden="true"></i></a>
-          <a href="https://www.instagram.com/kaveel.lil/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <a href="https://www.instagram.com/kaveel.lil/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div class="aboutAuthor">
-      <div class="aboutAuthorHeight">
+      <div class="aboutAuthor anim" data-delay="0.5s">
+        <div style="font-size: 1.5em; padding: 0; font-weight: bold;">About Author</div>
+        <div class="aboutAuthorHeight">
           <p>Kaveel Lilmohun is an author who writes books for a cross target audience of young and new adults.</p>
 
           <p>He writes books in the horror and thriller genre under the series name Lilmohorror and Lilmothriller with
@@ -140,10 +153,10 @@
             languages, spending time with families and friends, reading and making new friends from around the world. He
             plans to travel, see the world and meet his global friends someday soon!</p>
           </p>
-        
+
+        </div>
+        <div id="readMoreAuthor">Read More...</div>
       </div>
-      <div id="readMoreAuthor">Read More...</div>
-    </div>
     </section>
     <section id="faq">
       <h1 id="mobileFaqHeading">FAQ</h1>
@@ -230,19 +243,21 @@
       <h1>Future Projects</h1>
       <img src="./assets/future.jpg" class="futureImage" />
       <div class="futureContent">
-      <p >I am currently working on book eight , nine and ten simultaneously. I am at the beginning stages for all three
-        books. I hopped between the three books as I am inspired by ideas relevant to those individual titles.<br />
-        I tend to write an idea when it immediately comes to mind so I can draft the best chapter while it's still fresh
-        in my head. <br />
-        I am currently editing my second book which will fall under the Lilmothriller banner. I am planning
-        to
-        release it towards the end of 2020 or early next year.<br />
-        In terms of content the second book has been completed. I plan to release a minimum of two books , with a
-        maximum
-        of four books yearly. <br />
-        For more information keep checking the website as I will be updating it regularly.
-      </p>
-    </div>
+        <p>I am currently working on book eight , nine and ten simultaneously. I am at the beginning stages for all
+          three
+          books. I hopped between the three books as I am inspired by ideas relevant to those individual titles.<br />
+          I tend to write an idea when it immediately comes to mind so I can draft the best chapter while it's still
+          fresh
+          in my head. <br />
+          I am currently editing my second book which will fall under the Lilmothriller banner. I am planning
+          to
+          release it towards the end of 2020 or early next year.<br />
+          In terms of content the second book has been completed. I plan to release a minimum of two books , with a
+          maximum
+          of four books yearly. <br />
+          For more information keep checking the website as I will be updating it regularly.
+        </p>
+      </div>
     </section>
     <section id="contactus">
       <div>
@@ -257,10 +272,10 @@
         </div>
       </div>
     </section>
-    <div id="footer">
-      <span>Kaveel LilMohun Copyright 2020</span>
-      <span>Designed By <a href="https://anidia.org/" target="_blank" style="color:#c53434; ;"><b>Anidia</b></a></span>
-      <span style="font-size: 1.5em;"><a href="https://www.facebook.com/LILMOHORROR.LILMOTHRILLER"><i
+    <div id="footer" class="grid">
+      <span class="copy">Kaveel LilMohun Copyright 2020</span>
+      <span class="credit">Designed By <a href="https://anidia.org/" target="_blank" style="color:#c53434; ;"><b>Anidia</b></a></span>
+      <span style="font-size: 1.5em;" class="footerSocial"><a href="https://www.facebook.com/LILMOHORROR.LILMOTHRILLER"><i
             class="fa fa-facebook-official" aria-hidden="true"></i></a>
         <a href="https://www.instagram.com/kaveel.lil/"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
     </div>
@@ -274,34 +289,88 @@
         <a href="https://www.amazon.com/dp/B08FBCTZT6" target="_blank">
           <div style="display: flex; flex-direction: column; ">
             <div class="buyLinks">
-              <img src="./assets/kindle.png" height="20%" width="40%">
-              <span>Link</span>
+              <img src="./assets/Amazon_logo.svg" width="150px" height="40px"/>
+              <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
             </div>
         </a>
         <a href="https://www.smashwords.com/books/view/1036835" target="_blank">
           <div class="buyLinks">
-            <img src="./assets/swlogo.png" height="20%" width="40%">
-            <span>Link</span>
+            <img src="./assets/smashwords.svg" width="150px" height="40px"/>
+          <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
           </div>
         </a>
         <a href="https://www.kobo.com/za/en/ebook/sinister-spells" target="_blank">
           <div class="buyLinks">
-            <img src="./assets/kobologo.png" height="20%" width="40%">
-            <span>Link</span>
+            <img src="./assets/Rakuten_Kobo_logo.svg" width="150px" height="40px"/>
+            <i class="fa fa-external-link" style="font-size:1.5em;color: black;" aria-hidden="true"></i>
           </div>
         </a>
+
+        <a href="https://www.takealot.com/sinister-spells/PLID70436990" target="_blank">
+          <div class="buyLinks">
+            <img src="./assets/takealot.svg" width="150px" height="40px"/>
+          <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a href="https://www.barnesandnoble.com/w/sinister-spells-kaveel-lilmohun/1137446656?ean=2940164211004" target="_blank">
+          <div class="buyLinks">
+            <img src="./assets/Barnes_&_Noble_logo.svg" width="150px" height="40px"/>
+            <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
+          </div>
+        </a>
+
       </div>
-    </div>
-
-    <div id="closeBuyMob"
-      style="position:absolute; margin:auto 0; padding: 10px; width: 100vw; text-align: center; background-color: #660000;bottom: 0; color: white; border-radius: 5px;">
+      <div id="closeBuyMob"
+      style="position:absolute; bottom:0; left:0;margin: auto 0; padding: 10px; width: 100vw; text-align: center; background-color: #660000;bottom: 0; color: white; border-radius: 5px;">
       Close</div>
+    </div>
+    
 
+    
 
 
   </div>
   <div id="buyNowPC">
+    <div class="buyNowPCLinks">
+      <i class="fa fa-times-circle closePCBuy" style="font-size: xx-large;"aria-hidden="true"></i>
+      <h1>Purchase your copy now from your favourite store</h1>
+        <hr/>
+      <a href="https://www.amazon.com/dp/B08FBCTZT6"target="_blank">
+        <div style="display: flex; flex-direction: row; justify-content: space-between;  margin-top: 20px;">
+          <img src="./assets/Amazon_logo.svg" width="150px" height="40px"/>
+          <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
+        </div>
+      </a>
 
+      <a href="https://www.smashwords.com/books/view/1036835"target="_blank">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 20px 0;">
+          <img src="./assets/smashwords.svg" width="150px" height="40px"/>
+          <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
+        </div>
+      </a>
+
+      <a href="https://www.kobo.com/en/ebook/sinister-spells" target="_blank">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 20px 0;">
+          <img src="./assets/Rakuten_Kobo_logo.svg" width="150px" height="40px"/>
+          <i class="fa fa-external-link" style="font-size:1.5em;color: black;" aria-hidden="true"></i>
+        </div>
+      </a>
+
+      <a href="https://www.takealot.com/sinister-spells/PLID70436990"target="_blank">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 20px 0;">
+          <img src="./assets/takealot.svg" width="150px" height="40px"/>
+          <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
+        </div>
+      </a>
+
+      <a href="https://www.barnesandnoble.com/w/sinister-spells-kaveel-lilmohun/1137446656?ean=2940164211004"target="_blank">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 20px 0;">
+          <img src="./assets/Barnes_&_Noble_logo.svg" width="150px" height="40px"/>
+          <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
+        </div>
+      </a>
+    </div>
   </div>
 
   </div>

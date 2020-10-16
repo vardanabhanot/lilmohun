@@ -25,15 +25,39 @@ for (i = 0; i < coll.length; i++) {
 const buyNow = document.querySelector(".buyNow");
 const buyNowMobile = document.querySelector("#buyNowMobile");
 const closebuyNowMob = document.querySelector("#closeBuyMob");
+const overlay = document.querySelector('#overlay');
+const body = document.querySelector('body');
 
 buyNow.addEventListener("click", () => {
   buyNowMobile.style.display = "block";
+  overlay.style.display = "block"
+  body.style.overflowY = "hidden";
 });
+
 
 closebuyNowMob.addEventListener("click", () => {
   buyNowMobile.style.display = "none";
-  buyNowMobile.style.transition = "0.2s ease-out linear";
+  overlay.style.display = "none"
+  body.style.overflowY = "unset";
 });
+
+const buyButton = document.querySelector("#buyButton");
+const buyNowPCModal = document.querySelector("#buyNowPC");
+const closePCModal = document.querySelector('.closePCBuy');
+
+buyButton.addEventListener("click",()=>{
+  buyNowPCModal.style.visibility="visible";
+  buyNowPCModal.style.opacity="1";
+  body.style.overflowY = "hidden";
+});
+
+closePCModal.addEventListener('click',()=>{
+  buyNowPCModal.style.visibility="hidden";
+  buyNowPCModal.style.opacity="0";
+  body.style.overflowY = "unset";
+})
+
+
 
 const burger = document.querySelector(".burger");
 const mobileMenu = document.querySelector("#mobileMenu");
@@ -78,3 +102,44 @@ authorReadMore.addEventListener("click", (e) => {
     authorReadMore.textContent = "Read More...";
   }
 });
+
+const bookReadMore = document.querySelector("#readMoreBook");
+const aboutBookHeight = document.querySelector(".aboutBookHeight");
+
+bookReadMore.addEventListener('click', (e) =>{
+  let maxHeight = getComputedStyle(aboutBookHeight);
+  if (maxHeight.maxHeight == "262.5px") {
+    aboutBookHeight.style.maxHeight = "63vh";
+    aboutBookHeight.style.overflowY = "scroll";
+    aboutBookHeight.style.transition = "0.3s max-height ease-out";
+    bookReadMore.textContent = "Read Less";
+  }
+  else{
+    aboutBookHeight.style.maxHeight = "42vh";
+    aboutBookHeight.style.overflowY = "hidden";
+    aboutBookHeight.style.transition = "0.3s max-height ease-in";
+    bookReadMore.textContent = "Read More...";
+  }
+})
+
+
+
+//scroll animations
+
+ const images = document.querySelectorAll('.anim');
+
+        observer = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+                if(entry.intersectionRatio > 0) {
+                    entry.target.style.animation = `anim1 2s ${entry.target.dataset.delay} forwards ease-out`;
+                }
+                else {
+                    entry.target.style.animation = 'none';
+                }
+            })
+
+        })
+        images.forEach(image => {
+          observer.observe(image)
+      })

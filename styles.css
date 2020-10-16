@@ -81,14 +81,13 @@ a {
 #buyNowMobile {
   display: none;
   width: 100%;
-  height: 60%;
+  height: 70vh;
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 6;
   background-color: white;
   border-radius: 40px 40px 0 0;
-  box-shadow: -1px -3px 5px 1000px rgba(0, 0, 0, 0.8);
   animation: buyNowAnime 0.4s ease-in-out;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -105,8 +104,24 @@ a {
   }
 }
 
+#overlay{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  background-color:rgba(0,0,0,0.5);
+  pointer-events: none;
+  width: 100%;
+  height: 100vh;
+}
+
 #buyNowMobile .buyMobileContent {
   padding: 20px;
+}
+
+#buyNowMobile a{
+  padding:10px 0;
 }
 
 #buyNowMobile a:link {
@@ -124,6 +139,7 @@ a {
 
 #buyNowMobile .buyLinks {
   display: flex;
+  color: black;
   justify-content: space-between;
   align-items: center;
   padding: 0px 0
@@ -132,9 +148,47 @@ a {
 /*end of mobile buy modal slideup*/
 
 
+
+#buyButton{
+  display: none;
+}
 #buyNowPC {
   /*TODO:maybe i will change it*/
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  width: 100%;
+  height: 100vh;
+  background-color:rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s opasity 0.5s;
+}
+
+#buyNowPC h1{
+  font-size: .9em;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.buyNowPCLinks{
+  position: relative;
+  background-color: #fff;
+  color: black;
+  border-radius: 5px;
+  width: 30%;
+  padding: 20px;
+}
+.closePCBuy{
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  cursor: pointer;
+  
 }
 
 /* --------------------mobile 360px  starts here-----------------------*/
@@ -208,7 +262,7 @@ section {
 /*home section*/
 #front {
   height: 100vh;
-  background: url(./assets/lilmohorror.png);
+  background: url("./assets/homeSectionbg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -246,7 +300,7 @@ section {
   font-size: 3.2em;
   font-weight: 900;
   margin-top: 5px;
-  color: #b60d0d;
+  color: #a51010;
   text-shadow: 2px 4px 2px rgba(245, 185, 185, 0.05);
   padding: 0;
 }
@@ -361,7 +415,7 @@ section {
 
 /*About Author */
 #author {
-  background: url("./assets/about.jpg");
+  background: url("./assets/aboutauthorbg.webp");
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -423,6 +477,7 @@ section {
   font-size: 2.5em;
   font-family: Bloody;
 }
+
 .aboutAuthorHeight {
   max-height: unset;
   overflow-y: hidden;
@@ -509,10 +564,8 @@ section {
 
 /*Future Project Section*/
 #futureprojects {
-  display: flex;
-  flex-direction: column;
   height: unset;
-  background: url("./assets/crows.jpg");
+  background: url("./assets/futureprojbg.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -540,7 +593,7 @@ section {
 /*Contact Us Section*/
 #contactus {
   min-height: 100vh;
-  background-color: darkslategray;
+  background-color:#171717;
   color: white;
   padding-top: 50px;
 }
@@ -595,11 +648,8 @@ textarea {
 
 /*Footer*/
 #footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: rgb(20, 44, 44);
+  text-align: center;
+  background-color: #131313;
   padding: 20px;
   font-size: 0.8em;
   color: white;
@@ -663,6 +713,22 @@ textarea {
     font-size: 5em;
     padding: 0;
   }
+  .homebuttons{
+    display: none;
+  }
+  #buyButton{
+    display: flex;
+    padding: 10px 20px;
+    max-width: 15vw;
+    color: #fff;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #660000;
+    border-radius: 4px;
+    font-size: 1.4em;
+    
+    font-weight: bold;
+  }
 
   #books {
     height: 100vh;
@@ -683,13 +749,28 @@ textarea {
   .aboutBook {
     grid-column: 4/8;
     grid-row: 1;
-    margin: auto;
+    margin: 12% 0;
     padding: 0;
-    max-height: 80vh;
+    align-self: self-start;
+  }
+
+  .aboutBookHeight {
+    max-height: 42vh;
     overflow-y: scroll;
   }
 
-  .aboutBook::-webkit-scrollbar {
+  #readMoreBook {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #660000;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+
+  .aboutBookHeight::-webkit-scrollbar {
     width: 1px;
   }
 
@@ -701,7 +782,6 @@ textarea {
 
   /*About Author Section*/
   #author {
-    display: grid;
     height: 100vh;
     padding: 20px 20px;
   }
@@ -711,7 +791,7 @@ textarea {
     text-align: center;
     margin: 0;
     padding: 0;
-    font-size: 2.3em;
+    font-size: 2.5em;
     margin-bottom: 20px;
     font-family: Bloody;
   }
@@ -725,7 +805,7 @@ textarea {
 
   #aboutAuthorImg {
     width: 350px;
-    height: 55vh;
+    height: 60vh;
     margin: auto auto;
   }
 
@@ -757,7 +837,6 @@ textarea {
   }
 
   #futureprojects {
-    display: grid;
     height: 100vh;
     padding: 20px 20px;
   }
@@ -771,15 +850,18 @@ textarea {
   }
 
   .futureImage {
-    grid-column: 1/4;
+    grid-column: 2/4;
+    grid-row: 2;
     width: 340px;
     align-self: self-start;
   }
 
   .futureContent {
-    grid-column: 4/9;
+    grid-column: 4/8;
+    grid-row: 2;
     align-self: self-start;
-    margin-right: 160px;
+    
+    margin-left: 50px;
   }
 
   #faqHeading {
@@ -795,19 +877,20 @@ textarea {
     display: none;
   }
 
-  #footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: rgb(20, 44, 44);
-    padding: 5px;
-    font-size: 1.1em;
-    color: white;
+  #footer span {
+    font-size: 1.2em;
   }
 
-  #footer span{
-    width: max-content;
+  #footer .copy{
+    grid-column: 1/3;
   }
+  #footer .credit{
+    grid-column: 3/7;
+  }
+  #footer .footerSocial{
+    grid-column: 7/9;
+  }
+
 
 }
 
@@ -823,7 +906,6 @@ textarea {
     font-size: 1.7em;
   }
 
-
   #series {
     font-size: 2.6;
   }
@@ -836,25 +918,71 @@ textarea {
     font-size: 1.4em;
   }
 
+  #buyButton{
+    padding: 20px 50px;
+    max-width: 15vw;
+    font-size: 1.4em;
+  }
+
   .aboutBook {
     overflow-y: unset;
+    margin: 15% 0;
   }
+
+  .aboutBookHeight {
+    max-height: unset;
+    overflow-y: unset;
+  }
+
+  #readMoreBook {
+    display: none;
+  }
+
 
   .aboutAuthor {
     padding-right: 50px;
   }
+
   .aboutAuthorHeight {
     max-height: unset;
     overflow-y: hidden;
   }
-  
+
   #readMoreAuthor {
     display: none;
+  }
+  #aboutAuthorImg {
+    width: 380px;
+    height: 50vh;
   }
 
 
   .collapseWrapper {
     width: 50%;
     margin: 35px auto;
+  }
+
+  .futureImage {
+    width: 380px;
+    height: 50vh;
+  }
+}
+
+
+
+/*Animations here*/
+.anim {
+  opacity: 0;
+}
+
+@keyframes anim1 {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
