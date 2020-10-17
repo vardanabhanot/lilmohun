@@ -142,4 +142,52 @@ bookReadMore.addEventListener('click', (e) =>{
         })
         images.forEach(image => {
           observer.observe(image)
-      })
+      });
+
+
+
+//form submit
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById('contactEmail').value;
+  const name = document.getElementById('contactName').value;
+  const message = document.getElementById('contactMessage').value;
+
+
+  const url = `https://script.google.com/macros/s/AKfycbyhkmrcLjzNmiiTc8jddt0nkx_tgge3UH2zRvtw/exec?email=${email}&name=${name}&message=${message}`;
+  const options = {
+    method:"POST",
+    mode: 'cors',
+    header:{
+      "Content-Type": "applications/json",
+    }
+  };
+
+  fetch(url,options)
+  .then(response =>{
+
+    //console.log(response);
+    const formSubmitResponse = document.querySelector('#formSubmitResponse');
+    
+    if(response.status == 200){
+      console.log("hello");
+      formSubmitResponse.style.visibility = "visible";
+      formSubmitResponse.style.textContent = "Success";
+      formSubmitResponse.style.background = "#4BB543"
+      formSubmitResponse.style.textContent = "Form Submitted";
+      //formSubmitResponse.style.opacity = "1";
+
+      formSubmitResponse.style.animation = "success 4s forwards ease-out";
+    
+    }
+   }
+  )
+  .catch(err=>{
+    console.log(err);
+  })
+
+})
