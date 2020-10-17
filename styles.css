@@ -4,6 +4,11 @@
     Vardana
 */
 
+
+:root{
+  --bloodRed: #660000;
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -343,7 +348,7 @@ section {
   background: transparent;
   outline: none;
   border-radius: 20px;
-  background-color: #660000;
+  background-color: var(--bloodRed);
   text-transform: uppercase;
   font-weight: 1200;
   color: white;
@@ -471,7 +476,7 @@ section {
 }
 
 .social a:hover {
-  color: #660000;
+  color:var(--bloodRed);
   transform: scale(1.3);
 }
 
@@ -551,7 +556,7 @@ section {
 
 .collapsible:after {
   content: '\002B';
-  color: #660000;
+  color: var(--bloodRed);
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -628,7 +633,7 @@ input {
   margin: 5px;
   outline: none;
   border: none;
-  border-radius: 20px;
+  border-radius: 6px;
   display: block;
   width: 100%;
 }
@@ -638,44 +643,77 @@ textarea {
   margin: 5px;
   outline: none;
   border: none;
-  border-radius: 20px;
+  border-radius: 6px;
   width: 100%;
   height: 30vh;
 }
 
 .formButton {
   display: flex;
-  padding: 10px 50px;
-  margin: auto;
-  outline: none;
-  border: none;
-  border-radius: 20px;
-  background-color: #660000;
-  color: white;
+  align-items: center;
   justify-content: center;
+  margin: auto auto;
+  outline: none;
+  border-radius: 40px;
+  background-color: var(--bloodRed);
+  color: white;
+  transition: all 0.25s ease;
+  height: 40px;
+  width: 130px;
+  border-radius:40px;
+  border: 2px solid var(--bloodRed);
+  letter-spacing:1px;
+  text-shadow:0;
 }
-
 
 .formButton:hover{
   background-color: #a03434;
   transform: translateY(2px);
-  -webkit-box-shadow: -1px 3px 54px -73px rgba(41,38,41,1);
--moz-box-shadow: -1px 3px 54px -73px rgba(41,38,41,1);
-box-shadow: -1px 3px 54px -73px rgba(41,38,41,1);
 }
-#formSubmitResponse{
-  display: flex;
-  position: fixed;
-  z-index: 3;
-  bottom: 0;
-  margin: 0 auto;
-  font-size: 1.2em;
-  padding: 5px 30px ;
-  border-radius: 6px;
-  margin-bottom: 4px;
-  background-color: rgb(0,0,0);
-  visibility: hidden;
-  opacity: 0;
+.formButton::after{
+  content:"SUBMIT";
+}
+
+.onclick{
+  width: 40px;
+  border-color:#bbb;
+  border-width:3px;
+  background: #171717;
+  font-size:0;
+  border-left-color:var(--bloodRed);
+  animation: rotating 2s 0.25s linear infinite;
+}
+
+.onclick:after{
+  content: "";
+}
+
+.onclick:hover{
+  color: var(--bloodRed);
+  background:#171717;
+}
+.validate{
+  font-size: 13px;
+  color: #fff;
+  background-color: #1ecd97;
+  border: 1px solid #1ecd97;
+}
+
+.validate:after{
+  font-family: 'FontAwesome';
+  content:'\f00c';
+}
+.validate:hover{
+  background:#1ecd97;;
+}
+
+@keyframes rotating {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
 
 /*Footer*/
@@ -755,7 +793,7 @@ box-shadow: -1px 3px 54px -73px rgba(41,38,41,1);
     color: #fff;
     justify-content: center;
     cursor: pointer;
-    background-color: #660000;
+    background-color: var(--bloodRed);
     border-radius: 4px;
     font-size: 1.4em;
     
@@ -794,7 +832,7 @@ box-shadow: -1px 3px 54px -73px rgba(41,38,41,1);
   #readMoreBook {
     display: inline-block;
     padding: 8px 20px;
-    background-color: #660000;
+    background-color: var(--bloodRed);
     color: #fff;
     border-radius: 4px;
     font-weight: bold;
@@ -860,7 +898,7 @@ box-shadow: -1px 3px 54px -73px rgba(41,38,41,1);
   #readMoreAuthor {
     display: inline-block;
     padding: 8px 20px;
-    background-color: #660000;
+    background-color: var(--bloodRed);
     color: #fff;
     border-radius: 4px;
     font-weight: bold;
