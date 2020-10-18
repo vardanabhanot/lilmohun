@@ -23,7 +23,8 @@ const closebuyNowMob = document.querySelector("#closeBuyMob");
 const overlay = document.querySelector("#overlay");
 const body = document.querySelector("body");
 
-buyNow.addEventListener("click", () => {
+buyNow.addEventListener("click", (e) => {
+  e.preventDefault();
   buyNowMobile.style.display = "block";
   overlay.style.display = "block";
   body.style.overflowY = "hidden";
@@ -39,7 +40,8 @@ const buyButton = document.querySelector("#buyButton");
 const buyNowPCModal = document.querySelector("#buyNowPC");
 const closePCModal = document.querySelector(".closePCBuy");
 
-buyButton.addEventListener("click", () => {
+buyButton.addEventListener("click", (e) => {
+  e.preventDefault();
   buyNowPCModal.style.visibility = "visible";
   buyNowPCModal.style.opacity = "1";
   body.style.overflowY = "hidden";

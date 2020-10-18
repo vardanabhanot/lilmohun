@@ -1,4 +1,4 @@
-const staticCacheName = 'site-static';
+const staticCacheName = 'v1';
 const assets = [
   "./",
   "./index.html",
@@ -17,14 +17,26 @@ self.addEventListener("install", (evt) => {
 });
 
 self.addEventListener("activate", (evt) => {
-  //console.log('service worker has been activated');
+  console.log('service worker has been activated');
+  //Remove cache
+  evt.waitUntil(
+    caches.keys().then(staticCacheName =>{
+      return Promise.all(
+        staticCacheName.map(cache =>{
+          if(cache !== staticCacheName){
+            console.log('Service Worker: Clearing Old Cache');
+            return caches.delete(cache);
+          }
+        })
+      )
+    })
+  )
 });
 
 self.addEventListener("fetch", (evt) => {
-  //console.log("fetch",evt);
+  console.log('Service Woker: Fetch');
   evt.respondWith(
-    caches.match(evt.request).then(cacheRes =>{
-      return cacheRes || fetch(evt.request);
-    })
-  );
+    fetch(evt.request).catch(() => caches.match(evt.request))
+   
+  )
 });
