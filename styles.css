@@ -753,6 +753,22 @@ textarea {
   font-size: 1.6em;
 }
 
+#toTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  z-index: 3;
+  font-size: 1.3em;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
 @media only screen and (min-width: 960px) {
 
   p {
@@ -897,7 +913,7 @@ textarea {
 
   .aboutBookHeight {
     max-height: 42vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
 
   #readMoreBook {
@@ -1191,6 +1207,92 @@ textarea {
     font-weight: 1200;
     color: white;
   }
+}
+
+/*For ipad pro Potrait*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+   .bookCover{
+     width: 39vw;
+     height: auto;
+   } 
+   #buyButton{
+      max-width: 30vw;
+     padding: 10px 50px;
+   }
+   .sinBook{
+     width: 100%;
+     height: auto;
+   }
+   .aboutBook{
+     align-self: center;
+   }
+   .aboutBookHeight {
+    max-height: unset;
+    overflow-y: unset;
+  }
+  #readMoreBook{
+    display: none;
+  }
+  .aboutAuthorHeight{
+    max-height: unset;
+    overflow-y: unset;
+  }
+  #readMoreAuthor{
+    display: none;
+  }
+  #aboutAuthorImg{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/*For ipad pro Landscape*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .bookCover{
+      width: 50%;
+      height: auto;
+    } 
+    .sinBook{
+      width: 100%;
+      height: auto;
+    }
+    .aboutBookHeight {
+      max-height: unset;
+      overflow-y: unset;
+    }
+    #readMoreBook{
+      display: none;
+    }
+    .aboutBookHeight {
+      max-height: unset;
+      overflow-y: unset;
+    }
+    #readMoreBook{
+      display: none;
+    }
+    .aboutAuthorHeight{
+      max-height: unset;
+      overflow-y: unset;
+    }
+    #readMoreAuthor{
+      display: none;
+    }
+    #aboutAuthorImg{
+      width: 100%;
+      height: auto;
+    }
+    
+
 }
 
 

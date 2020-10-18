@@ -302,3 +302,14 @@ const fetchingCountryName = () =>{
 fetchingCountryName();
 
 
+let topbutton = document.getElementById("toTopBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  let topbutton = document.getElementById("toTopBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topbutton.style.display = "block";
+  } else {
+    topbutton.style.display = "none";
+  }
+}
