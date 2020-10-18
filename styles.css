@@ -122,7 +122,9 @@ a {
 }
 
 #buyNowMobile .buyMobileContent {
-  padding: 20px;
+  padding:  0 20px;
+  max-height: 51vh;
+  overflow-y: scroll;
 }
 
 #buyNowMobile a{
@@ -137,7 +139,8 @@ a {
   color: red;
 }
 
-#buyNowMobile .buyMobileContent h1 {
+#buyNowMobile h1 {
+  padding: 10px;
   font-size: 0.8em;
   text-align: center;
 }
@@ -166,6 +169,7 @@ a {
   height: 100vh;
   background-color:rgba(0,0,0,0.5);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   visibility: hidden;
@@ -185,8 +189,20 @@ a {
   color: black;
   border-radius: 5px;
   width: 30%;
-  padding: 20px;
+  height: 80vh;
+  padding: 10px 20px;
+  
 }
+.pcLinks{
+  height: 69vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.pcLinks::-webkit-scrollbar {
+  width: 1px;
+}
+
 .closePCBuy{
   position: absolute;
   right: -5px;
@@ -819,7 +835,7 @@ textarea {
   }
 
   #title {
-    font-size: 5em;
+    font-size: 5.6em;
     padding: 0;
   }
   .homebuttons{
@@ -828,7 +844,7 @@ textarea {
   #buyButton{
     display: flex;
     padding: 10px 20px;
-    max-width: 15vw;
+    max-width: 13vw;
     color: #fff;
     justify-content: center;
     cursor: pointer;
@@ -1112,7 +1128,7 @@ textarea {
 
   .aboutBook {
     overflow-y: unset;
-    margin: 13% 0;
+    margin: 8% 0;
   }
 
   .aboutBookHeight {
