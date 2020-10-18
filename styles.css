@@ -158,7 +158,6 @@ a {
   display: none;
 }
 #buyNowPC {
-  /*TODO:maybe i will change it*/
   position: fixed;
   top: 0;
   left: 0;
@@ -230,6 +229,10 @@ nav {
 .logo {
   font-size: 1.5em;
 }
+.logo a:hover{
+  color:var(--bloodRed);
+  transition: color .5s ease-out;
+}
 
 .nav-links {
   display: none;
@@ -266,6 +269,7 @@ section {
 
 /*home section*/
 #front {
+  position: relative;
   height: 100vh;
   background: url("./assets/homeSectionbg.webp");
   background-repeat: no-repeat;
@@ -316,16 +320,6 @@ section {
   color: white;
 }
 
-.icon-scroll {
-  position: absolute;
-  font-size: 1.2em;
-  color: white;
-  top: 90%;
-  left: 47%;
-  margin-top: 2%;
-  animation: attract 0.8s infinite;
-}
-
 .homebuttons {
   display: flex;
   justify-content: space-evenly;
@@ -354,38 +348,14 @@ section {
   color: white;
 }
 
-.buyNow:hover {
-  border: 1px solid yellow;
+.buyNow:active {
+  transform: scale(1.1);
 }
 
-@keyframes attract {
-  0% {
-    transform: translateY(0);
-  }
-
-  25% {
-    opacity: 25%;
-  }
-
-  50% {
-    transform: translateY(5px);
-    opacity: 100%;
-  }
-
-  100% {
-    transform: translateY(7px);
-  }
-}
-
-.icon-scroll:hover i {
+.icon-scroll{
   display: none;
 }
 
-.icon-scroll:hover:before {
-  content: "Read More";
-  margin-left: -40px;
-  font-style: "Verdana";
-}
 
 /* Books Section*/
 #books {
@@ -401,7 +371,7 @@ section {
   grid-row: 1;
   box-sizing: border-box;
   margin: 10px auto;
-  height: 70vh;
+  height: auto;
   width: 80vw;
   padding: 0;
 }
@@ -423,6 +393,28 @@ section {
 #readMoreBook {
     display: none;
   }
+
+#available{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+}  
+
+#available img{
+  width: 100px;
+  height: 30px;
+}  
+
+#available span{
+  padding: 10px 10px;
+  filter: grayscale(100%);
+}
+#available span:hover, span:active, span:focus{
+  filter: grayscale(0%);
+}
 
 
 
@@ -457,9 +449,8 @@ section {
 }
 
 #aboutAuthorImg {
-  width: 80vw;
-  max-width: 100%;
-  height: 63vh;
+  width: 100%;
+  height: auto;
   align-items: center;
   border-radius: 4px;
   margin: 0 auto;
@@ -472,11 +463,18 @@ section {
   margin-top: 20px;
   font-size: 3em;
   flex-direction: row;
+  color:var(--bloodRed);
   justify-content: space-evenly;
 }
+.social i{
+  color: var(--bloodRed);
+  padding:  0 20px;
+}
 
-.social a:hover {
-  color:var(--bloodRed);
+.social i:hover{
+  transform: translateY(2px);
+}
+.social i:active{
   transform: scale(1.3);
 }
 
@@ -595,8 +593,8 @@ section {
 }
 
 .futureImage {
-  width: 80vw;
-  height: 63vh;
+  width: 100%;
+  height: auto;
   max-width: 100%;
   border-radius: 4px;
   margin: 0 auto;
@@ -667,7 +665,8 @@ textarea {
 }
 
 .formButton:hover{
-  background-color: #a03434;
+  background-color: #b41616;
+  transition: background-color .5s ease;
   transform: translateY(2px);
 }
 .formButton::after{
@@ -716,6 +715,27 @@ textarea {
   }
 }
 
+.socialContact{
+  display: flex;
+  margin-top: 20%;
+  font-size: 2.3em;
+  align-content: center;
+  color: var(--bloodRed);
+  justify-content: center;
+  
+}
+.socialContact i{
+  color: var(--bloodRed);
+  padding:  0 20px;
+}
+
+.socialContact i:hover{
+  transform: translateY(2px);
+}
+.socialContact i:active{
+  transform: scale(1.3);
+}
+
 /*Footer*/
 #footer {
   text-align: center;
@@ -748,6 +768,9 @@ textarea {
     display: flex;
     justify-content: space-around;
     width: 60%;
+  }
+  .nav-links li:hover{
+    transform: translateY(2px);
   }
 
   .nav-links li {
@@ -799,6 +822,47 @@ textarea {
     
     font-weight: bold;
   }
+  .icon-scroll {
+    display: block;
+    position: absolute;
+    font-size: 1.2em;
+    z-index: 4;
+    color: white;
+    top: 88%;
+    left: 47%;
+    margin-top: 2%;
+    animation: attract 0.8s infinite;
+  }
+
+  @keyframes attract {
+    0% {
+      transform: translateY(0);
+    }
+  
+    25% {
+      opacity: 25%;
+    }
+  
+    50% {
+      transform: translateY(5px);
+      opacity: 100%;
+    }
+  
+    100% {
+      transform: translateY(7px);
+    }
+  }
+  
+  .icon-scroll:hover i {
+    display: none;
+  }
+  
+  .icon-scroll:hover:before {
+    content: "Read More";
+    margin-left: -40px;
+    font-style: "Verdana";
+  }
+  
 
   #books {
     height: 100vh;
@@ -814,6 +878,13 @@ textarea {
 
   .mobilesinBook {
     display: none;
+  }
+  #buyButton:hover{
+    background-color: #b41616;
+    transition: background-color 2s ease;
+  }
+  #buyButton:active{
+    transform: scale(1.1);
   }
 
   .aboutBook {
@@ -832,6 +903,7 @@ textarea {
   #readMoreBook {
     display: inline-block;
     padding: 8px 20px;
+    margin-top: 2px;
     background-color: var(--bloodRed);
     color: #fff;
     border-radius: 4px;
@@ -843,6 +915,18 @@ textarea {
   .aboutBookHeight::-webkit-scrollbar {
     width: 1px;
   }
+  #available{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: start;
+    margin-top: 20px;
+    animation: all .2s ease;
+  }
+  #available img{
+    width: 80px;
+    height: 30px;
+  }   
 
   .formInputs {
     width: 40%;
@@ -874,8 +958,8 @@ textarea {
   }
 
   #aboutAuthorImg {
-    width: 350px;
-    height: 60vh;
+    width: 300px;
+    height: 63vh;
     margin: auto auto;
   }
 
@@ -923,6 +1007,7 @@ textarea {
     grid-column: 2/4;
     grid-row: 2;
     width: 340px;
+    height: auto;
     align-self: self-start;
   }
 
@@ -977,7 +1062,7 @@ textarea {
   }
 
   #series {
-    font-size: 2.6;
+    font-size: 2.6em;
   }
 
   #title {
@@ -989,14 +1074,29 @@ textarea {
   }
 
   #buyButton{
-    padding: 20px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 15px 30px;
     max-width: 15vw;
     font-size: 1.4em;
+    
   }
+
+  #buyButton:hover{
+    background-color: #b41616;
+    transition: background-color 2s ease;
+  }
+  #buyButton:active{
+    transform: scale(1.1);
+  }
+
+
 
   .aboutBook {
     overflow-y: unset;
-    margin: 15% 0;
+    margin: 13% 0;
   }
 
   .aboutBookHeight {
@@ -1007,6 +1107,17 @@ textarea {
   #readMoreBook {
     display: none;
   }
+  #available{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: start;
+    margin-top: 20px;
+  }
+  #available img{
+    width: 100px;
+    height: 30px;
+  }   
 
 
   .aboutAuthor {
@@ -1022,8 +1133,8 @@ textarea {
     display: none;
   }
   #aboutAuthorImg {
-    width: 380px;
-    height: 50vh;
+    width: 100%;
+    height: auto;
   }
 
 
@@ -1033,8 +1144,52 @@ textarea {
   }
 
   .futureImage {
-    width: 380px;
-    height: 50vh;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width:280px){
+  .logo{
+    font-size: 1.2em;
+  }
+  #title{
+    font-size: 2.7em;
+  }
+  #series{
+    font-size: 1.5em;
+  }
+
+  .bookCover {
+    height: auto;
+    width: 70vw;
+    margin: auto;
+  }
+
+  .readMore {
+    padding: 10px 10px;
+    background: transparent;
+    outline: none;
+    font-size: .8em;
+    border: 1px solid white;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 20px;
+  }
+  .readMore:hover{
+    color:#000;
+    background-color: #fff;
+  }
+  .buyNow {
+    padding: 10px 20px;
+    background: transparent;
+    outline: none;
+    font-size: .8em;
+    border-radius: 20px;
+    background-color: var(--bloodRed);
+    text-transform: uppercase;
+    font-weight: 1200;
+    color: white;
   }
 }
 

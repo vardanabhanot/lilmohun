@@ -2,10 +2,6 @@ const readMore = document.querySelector(".icon-scroll");
 const readMoreText = document.querySelector(".readMore");
 const readMoreIcon = document.querySelector(".readMoreIcon");
 
-// readMore.addEventListener('mouseover', () => {
-//   readMoreIcon.style.display = 'none';
-//   readMoreText.stype.display = 'block';
-// });
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -105,6 +101,7 @@ authorReadMore.addEventListener("click", (e) => {
 
 const bookReadMore = document.querySelector("#readMoreBook");
 const aboutBookHeight = document.querySelector(".aboutBookHeight");
+const available = document.querySelector('#available');
 
 bookReadMore.addEventListener('click', (e) =>{
   let maxHeight = getComputedStyle(aboutBookHeight);
@@ -113,12 +110,19 @@ bookReadMore.addEventListener('click', (e) =>{
     aboutBookHeight.style.overflowY = "scroll";
     aboutBookHeight.style.transition = "0.3s max-height ease-out";
     bookReadMore.textContent = "Read Less";
+    available.style.display="none";
   }
   else{
     aboutBookHeight.style.maxHeight = "42vh";
     aboutBookHeight.style.overflowY = "hidden";
     aboutBookHeight.style.transition = "0.3s max-height ease-in";
     bookReadMore.textContent = "Read More...";
+    
+    setTimeout(()=>{
+      available.style.display="block";
+
+    },500);
+
   }
 })
 
@@ -188,6 +192,8 @@ contactForm.addEventListener('submit', (e) => {
       document.getElementById('contactEmail').value="";
       document.getElementById('contactName').value ="";
       document.getElementById('contactMessage').value ="";
+    }else{
+
     }
    }
   )

@@ -14,6 +14,13 @@
     content="KaveelLilMohun is a writer who usually write about horror books, His latest creation is SINISTER SPELLS." />
 
   <link rel="preload" type="text/css" href="./styles.css" as="style" />
+  <link rel="preload" type="image/webp" href="./assets/homeSectionbg.webp" as="image" />
+  <link rel="preload" type="image/webp" href="./assets/homebookMock.webp" as="image" />
+
+
+  <!-- <link rel="preload"  href="./assets/fonts/BLOODY.TTF" as="font" type="font/ttf" crossorigin="anonymous"/> -->
+  <link rel="preload" href="./assets/fonts/October Crow.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+
   <link rel="stylesheet" type="text/css" href="./styles.css" as="style" />
   <link rel="preload" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"
@@ -47,7 +54,7 @@
             <a href="/">Kaveel Lilmohun</a>
           </div>
           <ul class="nav-links">
-            <li><a href="#front">Home</a></li>
+            <li "><a href="#front"style="color: #a51010; font-weight:bolder;">Home</a></li>
             <li><a href="#books">Books</a></li>
             <li><a href="#author">About</a></li>
             <li><a href="#faq">FAQ</a></li>
@@ -71,15 +78,15 @@
             <a href="#buyNowMobile" class="buyNow">Buy Now</a>
           </div>
           <a href="#buyNowPC" id="buyButton">
-            Buy Now<i class="fa fa-arrow-right" style="transform: translateX(10px);" aria-hidden="true"></i>
+            Buy Now<i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </a>
         </div>
       </div>
       <div id="overlay"></div>
       <a href="#books">
-        <!-- <div class="icon-scroll">
+       <div class="icon-scroll">
           <i class="fa fa-chevron-down readMoreIcon" aria-hidden="true"></i>
-        </div> -->
+        </div> 
       </a>
     </section>
     <section id="books" class="grid" role="Book Section">
@@ -120,6 +127,15 @@
           </p>
         </div>
         <div id="readMoreBook">Read More...</div>
+        <div id="available">
+          <span style="font-weight: bolder;">Available on :-</span>
+          <a href="https://www.amazon.com/dp/B08FBCTZT6" target="_blank"><span><img src="./assets/Amazon_logo.svg" title="Amazon"/></span></a>
+          <a href="https://www.smashwords.com/books/view/1036835" target="_blank"><span><img src="./assets/smashwords.svg" title="Smashwords"/></span></a>
+          <a href="https://www.kobo.com/za/en/ebook/sinister-spells" target="_blank"><span><img src="./assets/Rakuten_Kobo_logo.svg" title="Kobo" /></span></a>
+          <a href="https://www.takealot.com/sinister-spells/PLID70436990" target="_blank"><span><img src="./assets/takealot.svg" title="TakeaLot" /></span></a>
+          <a href="https://www.barnesandnoble.com/w/sinister-spells-kaveel-lilmohun/1137446656?ean=2940164211004"
+          target="_blank"><span><img src="./assets/Barnes_&_Noble_logo.svg" title="Barnes and Nobel"/></span></a>
+        </div>
       </div>
     </section>
     <section id="author" class="grid" role="Author Section">
@@ -127,9 +143,10 @@
       <div id="imageAndSocial" class="anim" data-delay="0s">
         <img src="assets/kaveelpen.jpg" id="aboutAuthorImg" />
         <div class="social">
-          <a href="https://www.facebook.com/LILMOHORROR.LILMOTHRILLER" target="_blank"><i class="fa fa-facebook-official"
+          <a href="https://www.facebook.com/LILMOHORROR.LILMOTHRILLER" target="_blank"><i
+              class="fa fa-facebook-official" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/kaveel.lil/" target="_blank"><i class="fa fa-instagram"
               aria-hidden="true"></i></a>
-          <a href="https://www.instagram.com/kaveel.lil/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         </div>
       </div>
       <div class="aboutAuthor anim" data-delay="0.5s">
@@ -260,24 +277,34 @@
       </div>
     </section>
     <section id="contactus" role="Contact Us Section">
-      <div>
+      <h1>Contact Us</h1>
+      
         <div class="formInputs">
-          <h1>Contact Us</h1>
           <form method="POST" id="contactForm">
-            <input type="email" placeholder="Email" name="email" id="contactEmail" required/>
-            <input type="text" placeholder="Name" name="name" id="contactName" required/>
+            <input type="email" placeholder="Email" name="email" id="contactEmail" required />
+            <input type="text" placeholder="Name" name="name" id="contactName" required />
             <textarea placeholder="Enter your description here" name="message" id="contactMessage" required></textarea>
             <button type="submit" class="formButton"></button>
           </form>
-        </div>
+       
+        <div class="socialContact"><a href="https://www.facebook.com/LILMOHORROR.LILMOTHRILLER" target="_blank"><i
+          class="fa fa-facebook-official" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/kaveel.lil/" target="_blank"><i class="fa fa-instagram"
+          aria-hidden="true"></i></a>
+          <a href="mailto:bhanotvardana@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></div>
       </div>
     </section>
+
+
+
     <div id="footer" class="grid">
       <span class="copy">Kaveel LilMohun Copyright 2020</span>
-      <span class="credit">Designed By <a href="https://anidia.org/" target="_blank" style="color:#c53434; ;"><b>Anidia</b></a></span>
-      <span style="font-size: 1.5em;" class="footerSocial"><a href="https://www.facebook.com/LILMOHORROR.LILMOTHRILLER"><i
-            class="fa fa-facebook-official" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/kaveel.lil/"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+      <span class="credit">Designed By <a href="https://anidia.org/" target="_blank"
+          style="color:#c53434; ;"><b>Anidia</b></a></span>
+      <span style="font-size: 1.5em;" class="footerSocial"><a
+          href="https://www.facebook.com/LILMOHORROR.LILMOTHRILLER" target="_blank"><i class="fa fa-facebook-official"
+            aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/kaveel.lil/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
     </div>
 
     <!--modals-->
@@ -289,95 +316,97 @@
         <a href="https://www.amazon.com/dp/B08FBCTZT6" target="_blank">
           <div style="display: flex; flex-direction: column; ">
             <div class="buyLinks">
-              <img src="./assets/Amazon_logo.svg" width="150px" height="40px"/>
+              <img src="./assets/Amazon_logo.svg" width="150px" height="40px" />
               <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
             </div>
         </a>
         <a href="https://www.smashwords.com/books/view/1036835" target="_blank">
           <div class="buyLinks">
-            <img src="./assets/smashwords.svg" width="150px" height="40px"/>
-          <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
+            <img src="./assets/smashwords.svg" width="150px" height="40px" />
+            <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
           </div>
         </a>
         <a href="https://www.kobo.com/za/en/ebook/sinister-spells" target="_blank">
           <div class="buyLinks">
-            <img src="./assets/Rakuten_Kobo_logo.svg" width="150px" height="40px"/>
+            <img src="./assets/Rakuten_Kobo_logo.svg" width="150px" height="40px" />
             <i class="fa fa-external-link" style="font-size:1.5em;color: black;" aria-hidden="true"></i>
           </div>
         </a>
 
         <a href="https://www.takealot.com/sinister-spells/PLID70436990" target="_blank">
           <div class="buyLinks">
-            <img src="./assets/takealot.svg" width="150px" height="40px"/>
-          <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
+            <img src="./assets/takealot.svg" width="150px" height="40px" />
+            <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
           </div>
         </a>
 
-        <a href="https://www.barnesandnoble.com/w/sinister-spells-kaveel-lilmohun/1137446656?ean=2940164211004" target="_blank">
+        <a href="https://www.barnesandnoble.com/w/sinister-spells-kaveel-lilmohun/1137446656?ean=2940164211004"
+          target="_blank">
           <div class="buyLinks">
-            <img src="./assets/Barnes_&_Noble_logo.svg" width="150px" height="40px"/>
+            <img src="./assets/Barnes_&_Noble_logo.svg" width="150px" height="40px" />
             <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
           </div>
         </a>
 
       </div>
       <div id="closeBuyMob"
-      style="position:absolute; bottom:0; left:0;margin: auto 0; padding: 10px; width: 100vw; text-align: center; background-color: #660000;bottom: 0; color: white; border-radius: 5px;">
-      Close</div>
+        style="position:absolute; bottom:0; left:0;margin: auto 0; padding: 10px; width: 100vw; text-align: center; background-color: #660000;bottom: 0; color: white; border-radius: 5px;">
+        Close</div>
     </div>
-    
 
-    
+
+
 
 
   </div>
   <div id="buyNowPC">
     <div class="buyNowPCLinks">
-      <i class="fa fa-times-circle closePCBuy" style="font-size: xx-large;"aria-hidden="true"></i>
+      <i class="fa fa-times-circle closePCBuy" style="font-size: xx-large;" aria-hidden="true"></i>
       <h1>Purchase your copy now from your favourite store</h1>
-        <hr/>
-      <a href="https://www.amazon.com/dp/B08FBCTZT6"target="_blank">
+      <hr />
+      <a href="https://www.amazon.com/dp/B08FBCTZT6" target="_blank">
         <div style="display: flex; flex-direction: row; justify-content: space-between;  margin-top: 20px;">
-          <img src="./assets/Amazon_logo.svg" width="150px" height="40px"/>
+          <img src="./assets/Amazon_logo.svg" width="150px" height="40px" />
           <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
         </div>
       </a>
 
-      <a href="https://www.smashwords.com/books/view/1036835"target="_blank">
+      <a href="https://www.smashwords.com/books/view/1036835" target="_blank">
         <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 20px 0;">
-          <img src="./assets/smashwords.svg" width="150px" height="40px"/>
+          <img src="./assets/smashwords.svg" width="150px" height="40px" />
           <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
         </div>
       </a>
 
       <a href="https://www.kobo.com/en/ebook/sinister-spells" target="_blank">
         <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 20px 0;">
-          <img src="./assets/Rakuten_Kobo_logo.svg" width="150px" height="40px"/>
+          <img src="./assets/Rakuten_Kobo_logo.svg" width="150px" height="40px" />
           <i class="fa fa-external-link" style="font-size:1.5em;color: black;" aria-hidden="true"></i>
         </div>
       </a>
 
-      <a href="https://www.takealot.com/sinister-spells/PLID70436990"target="_blank">
+      <a href="https://www.takealot.com/sinister-spells/PLID70436990" target="_blank">
         <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 20px 0;">
-          <img src="./assets/takealot.svg" width="150px" height="40px"/>
+          <img src="./assets/takealot.svg" width="150px" height="40px" />
           <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
         </div>
       </a>
 
-      <a href="https://www.barnesandnoble.com/w/sinister-spells-kaveel-lilmohun/1137446656?ean=2940164211004"target="_blank">
+      <a href="https://www.barnesandnoble.com/w/sinister-spells-kaveel-lilmohun/1137446656?ean=2940164211004"
+        target="_blank">
         <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 20px 0;">
-          <img src="./assets/Barnes_&_Noble_logo.svg" width="150px" height="40px"/>
+          <img src="./assets/Barnes_&_Noble_logo.svg" width="150px" height="40px" />
           <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
         </div>
       </a>
     </div>
   </div>
 
-  
+
 
   </div>
 
-  
+
   <div id="mobileMenu">
     <ul class="nav-burger-links">
       <li><a href="#front">Home</a></li>
@@ -388,9 +417,9 @@
       <li><a href="#contactus">Contact Us</a></li>
     </ul>
   </div>
-  
+
 </body>
-<script src="./app.js"></script>
+<script defer src="./app.js"></script>
 <script>
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
