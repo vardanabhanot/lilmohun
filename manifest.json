@@ -32,5 +32,15 @@
             "type": "image/png",
             "purpose": "maskable any"
         }
+    ],
+    "shortcuts": [
+        {
+          "name": "Kaveel's FB",
+          "short_name": "FB Profile",
+          "description": "Kaveel Lilmohun's Facebook Profile",
+          "url": "./",
+          "icons": [{ "src": "./assets/fb-192.png", "sizes": "192x192" }]
+        }
     ]
+
 }
