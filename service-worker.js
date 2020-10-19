@@ -10,7 +10,7 @@ const assets = [
 self.addEventListener("install", (evt) => {
   evt.waitUntil(
     caches.open(staticCacheName).then((cache) => {
-      console.log("cashing in the shell");
+      //console.log("cashing in the shell");
       cache.addAll(assets);
     })
   );
@@ -24,7 +24,7 @@ self.addEventListener("activate", (evt) => {
       return Promise.all(
         staticCacheName.map(cache =>{
           if(cache !== staticCacheName){
-            console.log('Service Worker: Clearing Old Cache');
+            //console.log('Service Worker: Clearing Old Cache');
             return caches.delete(cache);
           }
         })
