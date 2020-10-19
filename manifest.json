@@ -35,12 +35,19 @@
     ],
     "shortcuts": [
         {
-          "name": "Kaveel's FB",
-          "short_name": "FB Profile",
-          "description": "Kaveel Lilmohun's Facebook Profile",
-          "url": "./",
-          "icons": [{ "src": "./assets/fb-192.png", "sizes": "192x192" }]
-        }
+          "name": "Contact US",
+          "short_name": "Contact",
+          "description": "Kaveel Lilmohun's Contact Details",
+          "url": "./index.html#contactus",
+          "icons": [{ "src": "./assets/mail.png", "sizes": "192x192" }]
+        },
+        {
+            "name": "Kaveel's Books",
+            "short_name": "Books",
+            "description": "Kaveel Lilmohun's Books",
+            "url": "./index.html#books",
+            "icons": [{ "src": "./assets/book.png", "sizes": "192x192" }]
+          }
     ]
 
 }

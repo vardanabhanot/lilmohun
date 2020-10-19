@@ -1,7 +1,9 @@
+//this is for the down animation arrow on the desktop version
 const readMore = document.querySelector(".icon-scroll");
 const readMoreText = document.querySelector(".readMore");
 const readMoreIcon = document.querySelector(".readMoreIcon");
 
+//FAQ :- This is to make the faq divs collaspe and expand
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
@@ -16,7 +18,9 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+//FAQ :- Collapse ends here
 
+//BuYNowMobile Button:- to make the button open the modal with buy links or mobile
 const buyNow = document.querySelector(".buyNow");
 const buyNowMobile = document.querySelector("#buyNowMobile");
 const closebuyNowMob = document.querySelector("#closeBuyMob");
@@ -35,7 +39,9 @@ closebuyNowMob.addEventListener("click", () => {
   overlay.style.display = "none";
   body.style.overflowY = "unset";
 });
+//BuyNowMobile Button:- Ends here
 
+//BuyNowPC Button:- To make buy Button on the Laptop+ screen work
 const buyButton = document.querySelector("#buyButton");
 const buyNowPCModal = document.querySelector("#buyNowPC");
 const closePCModal = document.querySelector(".closePCBuy");
@@ -52,7 +58,9 @@ closePCModal.addEventListener("click", () => {
   buyNowPCModal.style.opacity = "0";
   body.style.overflowY = "unset";
 });
+//BuyNowPC Button:- Ends here
 
+//Mobile Navigation Menu
 const burger = document.querySelector(".burger");
 const mobileMenu = document.querySelector("#mobileMenu");
 const wrapper = document.querySelector("#wrapper");
@@ -75,9 +83,12 @@ mobileMenu.addEventListener("click", (evt) => {
     wrapper.style.right = "0";
   }
 });
+//Mobile Nav Ends here
 
-//Read More
+//Read More button for 720px screens and around that
+//USed to enable and disable the scroll and adjust the height of the div
 
+//Read more for Author Section
 const authorReadMore = document.querySelector("#readMoreAuthor");
 const aboutAuthorHeight = document.querySelector(".aboutAuthorHeight");
 
@@ -96,6 +107,7 @@ authorReadMore.addEventListener("click", (e) => {
   }
 });
 
+//Read More for Book Section
 const bookReadMore = document.querySelector("#readMoreBook");
 const aboutBookHeight = document.querySelector(".aboutBookHeight");
 const available = document.querySelector("#available");
@@ -120,8 +132,9 @@ bookReadMore.addEventListener("click", (e) => {
   }
 });
 
-//scroll animations
+//Read More Ends here
 
+//scroll animations applied on About Author Section
 const images = document.querySelectorAll(".anim");
 
 observer = new IntersectionObserver((entries) => {
@@ -136,6 +149,7 @@ observer = new IntersectionObserver((entries) => {
 images.forEach((image) => {
   observer.observe(image);
 });
+//scroll animation ends here
 
 //form submit
 
@@ -176,22 +190,22 @@ contactForm.addEventListener("submit", (e) => {
         document.getElementById("contactEmail").value = "";
         document.getElementById("contactName").value = "";
         document.getElementById("contactMessage").value = "";
-      } else {
-      }
+      } else {}
     })
     .catch((err) => {
       console.log(err);
     });
 });
+//form Submission Ends here
 
-
+//Checking country of the user to show Amazon link of that specified country
 const ipLookUp = () => {
   const url = `https://geolocation-db.com/json/09ba3820-0f88-11eb-9ba6-e1dd7dece2b8`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
       let countryName = data.country_name;
-      localStorage.setItem("country",countryName);
+      localStorage.setItem("country", countryName);
       amazonBuyChange(countryName);
     })
     .catch((err, status) => {
@@ -199,10 +213,7 @@ const ipLookUp = () => {
     });
 };
 
-
-
-
-
+//swapping the links according to the country we got through ipLookUp()
 const amazonBuyChange = (country) => {
   const amazonLink = document.querySelectorAll(".amazonLink");
   const India =
@@ -294,18 +305,21 @@ const amazonBuyChange = (country) => {
   });
 };
 
-const fetchingCountryName = () =>{
-  if(localStorage.getItem("country")){
+const fetchingCountryName = () => {
+  if (localStorage.getItem("country")) {
     amazonBuyChange(localStorage.getItem("country"));
-  }else{
+  } else {
     ipLookUp();
   }
 };
 fetchingCountryName();
+//fetching country end here
 
-
+//go to top button on scroll
 let topbutton = document.getElementById("toTopBtn");
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
   let topbutton = document.getElementById("toTopBtn");
@@ -315,3 +329,5 @@ function scrollFunction() {
     topbutton.style.display = "none";
   }
 }
+
+//go to top ends here
