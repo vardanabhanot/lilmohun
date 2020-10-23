@@ -84,7 +84,11 @@
         </nav>
       </header>
       <div id="showbook" class="grid">
-        <img src="./assets/homebookMock.webp" alt="Sinister Spells Book cover" class="bookCover" />
+        <picture class="bookCover">
+          <source type="image/webp"  srcset="./assets/homebookMock.webp">
+          <source type="image/png"  srcset="./assets/homebookMock.png">
+        <img src="./assets/homebookMock.png" class="bookCover" alt="Sinister Spells Book cover"  />
+      </picture>
         <div id="info">
           <span id="series">Lil Mo Horror</span>
           <span id="title">Sinister Spells</span>
@@ -105,9 +109,17 @@
       </a>
     </section>
     <section id="books" class="grid">
+      <picture class="sinBook">
+        <source type="image/webp" srcset="./assets/aboutBookMockup.webp">
+        <source type="image/png" srcset="./assets/aboutBookMockup.png">
+      <img loading="lazy" src="./assets/aboutBookMockup.png" class="sinBook" alt="Sinister Spells Book Mockup" />
+    </picture>
 
-      <img src="./assets/aboutBookMockup.webp" class="sinBook" alt="Sinister Spells Book Mockup" />
-      <img src="./assets/coverflat.webp" class="mobilesinBook" alt="Sinister Spells Book Cover" />
+    <picture class="mobilesinBook">
+      <source type="image/webp"  srcset="./assets/coverflat.webp">
+        <source type="image/jpg"  srcset="./assets/coverflat.jpg">
+      <img loading="lazy" src="./assets/coverflat.jpg" class="mobilesinBook" alt="Sinister Spells Book Cover" />
+    </picture>
       <div class="aboutBook">
         <div style="font-size: 1.5em; padding: 0; font-weight: bold;">About Book</div>
         <div class="aboutBookHeight">
@@ -168,7 +180,7 @@
     <section id="author" class="grid">
       <h1>Kaveel Lilmohun</h1>
       <div id="imageAndSocial" class="anim" data-delay="0s">
-        <img src="assets/kaveelpen.jpg" id="aboutAuthorImg" alt="Kaveel Lilmohun" />
+        <img loading="lazy" src="assets/kaveelpen.jpg" id="aboutAuthorImg" alt="Kaveel Lilmohun" />
         <div class="social">
           <a href="https://www.facebook.com/LILMOHORROR.LILMOTHRILLER" target="_blank"><i
               class="fa fa-facebook-official" aria-hidden="true"></i></a>
@@ -264,17 +276,17 @@
     </section>
     <section id="futureprojects" class="grid">
       <h1>Future Projects</h1>
-      <img src="./assets/future.jpg" class="futureImage" alt="Kaveel Lilmohun" />
+      <img loading="lazy" src="./assets/future.jpg" class="futureImage" alt="Kaveel Lilmohun" />
       <div class="futureContent">
         <p>I am currently working on book eight, nine and ten simultaneously. I am at the beginning stages for all
           three
           books.<br/>
           I am currently editing my second book which will fall under the Lilmothriller banner. I am planning
           to
-          release it early next year.<br/>
+          release it early next year.<br />
           In terms of content the second book has been completed. I plan to release a minimum of two books, with a
           maximum
-          of four books yearly. <br/>
+          of four books yearly. <br />
           For more information keep checking the website as I will be updating it regularly.
         </p>
       </div>
