@@ -34,7 +34,7 @@ self.addEventListener("activate", (evt) => {
 });
 
 self.addEventListener("fetch", (evt) => {
-  console.log('Service Woker: Fetch');
+  //console.log('Service Woker: Fetch');
   evt.respondWith(
     fetch(evt.request).catch(() => caches.match(evt.request))
    
