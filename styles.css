@@ -294,10 +294,9 @@ section {
   position: relative;
   height: 100vh;
  background: url("./assets/homeSectionbg.webp");
-background: url("./assets/homeSectionbg.webp");
   background: image-set(
-    url("./assets/homeSectionbg.webp") type("image/webp") 600dpi,
-    url("./assets/homeSectionbg.jpg") type("image/jpg") 600dpi);
+    url("./assets/homeSectionbg.webp") type("image/webp") ,
+    url("./assets/homeSectionbg.jpg") type("image/jpg") );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
