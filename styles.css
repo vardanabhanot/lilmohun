@@ -293,7 +293,9 @@ section {
 #front {
   position: relative;
   height: 100vh;
-  background: url("./assets/homeSectionbg.webp");
+ background-image: url("./assets/homeSectionbg.webp");
+  /* background-image: image-set(url("./assets/homeSectionbg.webp") 1x); */
+  background-image: image-set(url("./assets/homeSectionbg.jpg") 1x);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
