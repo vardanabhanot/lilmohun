@@ -293,7 +293,7 @@ section {
 #front {
   position: relative;
   height: 100vh;
-  background: url("https://ik.imagekit.io/gmtd82gmg1/lilmohorror_W6F5sl6rM.png");
+  background: url("https://ik.imagekit.io/gmtd82gmg1/homeSectionbg_e5DoHsqVV.webp");
   background-repeat: no-repeat;
   background-size: cover;
   -o-background-size: cover;
@@ -617,7 +617,7 @@ span:focus {
 /*Future Project Section*/
 #futureprojects {
   height: unset;
-  background: url("https://ik.imagekit.io/gmtd82gmg1/crows_6pXB7QXKp.jpg");
+  background: url("https://ik.imagekit.io/gmtd82gmg1/futureprojbg_W8ktqjyYK.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
@@ -649,7 +649,7 @@ span:focus {
 /*Contact Us Section*/
 #contactus {
   min-height: 100vh;
-  background: url("https://ik.imagekit.io/gmtd82gmg1/contactUs_NE9Jv-VQe.jpg");
+  background: url("https://ik.imagekit.io/gmtd82gmg1/contactUsbg_kDD1OeXho.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
