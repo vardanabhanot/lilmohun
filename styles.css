@@ -296,7 +296,7 @@ section {
  background: url("./assets/homeSectionbg.webp");
 background: url("./assets/homeSectionbg.webp");
   background: image-set(
-    url("./assets/homeSectionbg.webp") type("image/webp" 600dpi),
+    url("./assets/homeSectionbg.webp") type("image/webp") 600dpi,
     url("./assets/homeSectionbg.jpg") type("image/jpg") 600dpi);
   background-repeat: no-repeat;
   background-size: cover;
