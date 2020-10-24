@@ -293,9 +293,8 @@ section {
 #front {
   position: relative;
   height: 100vh;
- background: url("./assets/homeSectionbg.webp");
-  background: image-set(
-    url("./assets/homeSectionbg.jpg") 3x);
+  background: url("https://ik.imagekit.io/gmtd82gmg1/lilmohorror_W6F5sl6rM.png");
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -452,7 +451,7 @@ span:focus {
 
 /*About Author */
 #author {
-  background: url("./assets/aboutauthorbg.webp"); /* Image By PixBay :- https://www.pexels.com/photo/backlit-dark-dawn-environment-289367/ */
+  background: url("https://ik.imagekit.io/gmtd82gmg1/aboutauthorbg_vwu7nLdyD.webp"); /* Image By PixBay :- https://www.pexels.com/photo/backlit-dark-dawn-environment-289367/ */
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -611,7 +610,7 @@ span:focus {
 /*Future Project Section*/
 #futureprojects {
   height: unset;
-  background: url("./assets/futureprojbg.webp");
+  background: url("https://ik.imagekit.io/gmtd82gmg1/crows_6pXB7QXKp.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -639,7 +638,7 @@ span:focus {
 /*Contact Us Section*/
 #contactus {
   min-height: 100vh;
-  background: url("./assets/contactUsbg.webp");
+  background: url("https://ik.imagekit.io/gmtd82gmg1/contactUs_NE9Jv-VQe.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
