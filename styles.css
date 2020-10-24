@@ -296,6 +296,9 @@ section {
   background: url("https://ik.imagekit.io/gmtd82gmg1/lilmohorror_W6F5sl6rM.png");
   background-repeat: no-repeat;
   background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
@@ -450,11 +453,15 @@ span:focus {
 
 /*About Author */
 #author {
-  background: url("https://ik.imagekit.io/gmtd82gmg1/aboutauthorbg_vwu7nLdyD.webp"); /* Image By PixBay :- https://www.pexels.com/photo/backlit-dark-dawn-environment-289367/ */
+  background: url("https://ik.imagekit.io/gmtd82gmg1/aboutauthorbg_vwu7nLdyD.webp");
+  /* Image By PixBay :- https://www.pexels.com/photo/backlit-dark-dawn-environment-289367/ */
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
   height: unset;
   color: white;
   padding: 30px;
@@ -613,6 +620,9 @@ span:focus {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
   color: white;
   padding: 30px;
 }
@@ -641,6 +651,9 @@ span:focus {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
   color: white;
   padding-top: 50px;
 }
@@ -818,11 +831,13 @@ textarea {
   p {
     font-size: 1.2em;
   }
-/*header*/
+
+  /*header*/
   .logo {
     font-size: 1.8em;
   }
-/*navigation*/
+
+  /*navigation*/
   .nav-links {
     position: unset;
     display: flex;
@@ -840,7 +855,9 @@ textarea {
 
   .burger {
     display: none;
-  } /*nav ends here*/
+  }
+
+  /*nav ends here*/
 
   .grid {
     display: grid;
@@ -850,7 +867,8 @@ textarea {
     justify-content: center;
     align-items: center;
   }
-/*home section*/
+
+  /*home section*/
   .bookCover {
     grid-column: 5/9;
     grid-row: 1;
@@ -876,7 +894,8 @@ textarea {
     display: flex;
     padding: 10px 20px;
     max-width: 13vw;
-    color: var(--bloodRed);;
+    color: var(--bloodRed);
+    ;
     justify-content: center;
     cursor: pointer;
     background-color: #fff;
@@ -897,6 +916,7 @@ textarea {
     margin-top: 2%;
     animation: attract 0.8s infinite;
   }
+
   /*down icon animation*/
   @keyframes attract {
     0% {
@@ -927,7 +947,7 @@ textarea {
     font-style: "Verdana";
   }
 
-/*Book Section*/
+  /*Book Section*/
   #books {
     height: 100vh;
   }
@@ -996,8 +1016,9 @@ textarea {
     width: 80px;
     height: 30px;
   }
-/*Book section ends here*/
-  
+
+  /*Book section ends here*/
+
 
   /*About Author Section*/
   #author {
@@ -1083,7 +1104,8 @@ textarea {
 
     margin-left: 50px;
   }
-/*FAQ*/
+
+  /*FAQ*/
   #faqHeading {
     display: block;
   }
@@ -1097,7 +1119,7 @@ textarea {
     display: none;
   }
 
-/*contact section*/
+  /*contact section*/
   .formInputs {
     width: 40%;
     margin: auto;
@@ -1387,7 +1409,7 @@ textarea {
 }
 
 
-/*Animation used in About Author Section*/  
+/*Animation used in About Author Section*/
 @keyframes anim1 {
   from {
     transform: translateY(-100px);
