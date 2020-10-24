@@ -299,7 +299,7 @@ section {
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-attachment: fixed;
 }
 
@@ -458,6 +458,7 @@ span:focus {
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center top;
   background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
@@ -619,6 +620,7 @@ span:focus {
   background: url("https://ik.imagekit.io/gmtd82gmg1/crows_6pXB7QXKp.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center top;
   background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
@@ -650,6 +652,7 @@ span:focus {
   background: url("https://ik.imagekit.io/gmtd82gmg1/contactUs_NE9Jv-VQe.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center top;
   background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
