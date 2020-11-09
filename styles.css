@@ -205,9 +205,6 @@ a {
   overflow-x: hidden;
 }
 
-.pcLinks::-webkit-scrollbar {
-  width: 1px;
-}
 
 .closePCBuy {
   position: absolute;

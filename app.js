@@ -320,9 +320,10 @@ fetchingCountryName();
 
 const paperbackIndia = () =>{
   if (localStorage.getItem("country") === "India") {
+    //to add amazon paperback link on Mobile buy modal
   const mobileBuy = document.querySelector(".justForScroll");
   const pcBuy = document.querySelector(".pcLinks");
-  console.log(pcBuy.childNodes);
+ 
   const amazonIndia = document.createElement("a");
   amazonIndia.setAttribute("href","https://www.amazon.in/dp/1637140029");
   amazonIndia.setAttribute("target","_blank");
@@ -334,6 +335,7 @@ const paperbackIndia = () =>{
   mobileBuy.prepend(amazonIndia);
 
 
+  //to add amazon paperback link on PC buy modal
   const amazonIndiaPC = document.createElement("a");
   amazonIndiaPC.setAttribute("href","https://www.amazon.in/dp/1637140029");
   amazonIndiaPC.setAttribute("target","_blank");
