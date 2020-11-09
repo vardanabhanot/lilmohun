@@ -94,7 +94,8 @@ const aboutAuthorHeight = document.querySelector(".aboutAuthorHeight");
 
 authorReadMore.addEventListener("click", (e) => {
   let maxHeight = getComputedStyle(aboutAuthorHeight);
-  if (maxHeight.maxHeight == "262.5px") {
+  
+  if (maxHeight.overflowY != "scroll") {
     aboutAuthorHeight.style.maxHeight = "63vh";
     aboutAuthorHeight.style.overflowY = "scroll";
     aboutAuthorHeight.style.transition = "0.3s max-height ease-out";
@@ -114,7 +115,8 @@ const available = document.querySelector("#available");
 
 bookReadMore.addEventListener("click", (e) => {
   let maxHeight = getComputedStyle(aboutBookHeight);
-  if (maxHeight.maxHeight == "262.5px") {
+ 
+  if (maxHeight.overflowY != "scroll") {
     aboutBookHeight.style.maxHeight = "63vh";
     aboutBookHeight.style.overflowY = "scroll";
     aboutBookHeight.style.transition = "0.3s max-height ease-out";
@@ -314,6 +316,36 @@ const fetchingCountryName = () => {
 };
 fetchingCountryName();
 //fetching country end here
+
+
+const paperbackIndia = () =>{
+  if (localStorage.getItem("country") === "India") {
+  const mobileBuy = document.querySelector(".justForScroll");
+  const pcBuy = document.querySelector(".pcLinks");
+  console.log(pcBuy.childNodes);
+  const amazonIndia = document.createElement("a");
+  amazonIndia.setAttribute("href","https://www.amazon.in/dp/1637140029");
+  amazonIndia.setAttribute("target","_blank");
+  amazonIndia.innerHTML = ` <div class="buyLinks">
+  <img src="./assets/Amazon_logo.svg" width="150px" height="40px" alt="Amazon Logo" />
+  <span style="font-size: 0.5em; background-color: #660000; color: #fff; padding: 5px; border-radius: 50px;">Paperback</span>
+  <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
+</div>`;
+  mobileBuy.prepend(amazonIndia);
+
+
+  const amazonIndiaPC = document.createElement("a");
+  amazonIndiaPC.setAttribute("href","https://www.amazon.in/dp/1637140029");
+  amazonIndiaPC.setAttribute("target","_blank");
+  amazonIndiaPC.innerHTML = ` <div style="display: flex; flex-direction: row; justify-content: space-between;  margin-top: 20px;">
+  <img src="./assets/Amazon_logo.svg" width="150px" height="40px" alt="Amazon logo" />
+  <span style="display:flex; justify-content:center; align-self:center; font-size: 0.8em; background-color: #660000; color: #fff; padding: 5px  20px 5px 20px; border-radius: 10px; text-align:center">Paperback</span>
+  <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
+</div>`;
+pcBuy.prepend(amazonIndiaPC);
+  }
+}
+paperbackIndia();
 
 //go to top button on scroll
 let topbutton = document.getElementById("toTopBtn");
