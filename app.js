@@ -318,37 +318,6 @@ fetchingCountryName();
 //fetching country end here
 
 
-const paperbackIndia = () =>{
-  if (localStorage.getItem("country") === "India") {
-    //to add amazon paperback link on Mobile buy modal
-  const mobileBuy = document.querySelector(".justForScroll");
-  const pcBuy = document.querySelector(".pcLinks");
- 
-  const amazonIndia = document.createElement("a");
-  amazonIndia.setAttribute("href","https://www.amazon.in/dp/1637140029");
-  amazonIndia.setAttribute("target","_blank");
-  amazonIndia.innerHTML = ` <div class="buyLinks">
-  <img src="./assets/Amazon_logo.svg" width="150px" height="40px" alt="Amazon Logo" />
-  <span style="font-size: 0.5em; background-color: #660000; color: #fff; padding: 5px; border-radius: 50px;">Paperback</span>
-  <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
-</div>`;
-  mobileBuy.prepend(amazonIndia);
-
-
-  //to add amazon paperback link on PC buy modal
-  const amazonIndiaPC = document.createElement("a");
-  amazonIndiaPC.setAttribute("href","https://www.amazon.in/dp/1637140029");
-  amazonIndiaPC.setAttribute("target","_blank");
-  amazonIndiaPC.innerHTML = ` <div style="display: flex; flex-direction: row; justify-content: space-between;  margin-top: 20px;">
-  <img src="./assets/Amazon_logo.svg" width="150px" height="40px" alt="Amazon logo" />
-  <span style="display:flex; justify-content:center; align-self:center; font-size: 0.8em; background-color: #660000; color: #fff; padding: 5px  20px 5px 20px; border-radius: 10px; text-align:center">Paperback</span>
-  <i class="fa fa-external-link" style="font-size:1.5em; color: black;" aria-hidden="true"></i>
-</div>`;
-pcBuy.prepend(amazonIndiaPC);
-  }
-}
-paperbackIndia();
-
 //go to top button on scroll
 let topbutton = document.getElementById("toTopBtn");
 window.onscroll = function () {
