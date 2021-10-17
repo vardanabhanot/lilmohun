@@ -167,19 +167,25 @@ contactForm.addEventListener("submit", (e) => {
 
   formButton.classList.add("onclick");
   formButton.classList.item(250);
-
+ 
   const url = `https://script.google.com/macros/s/AKfycbyhkmrcLjzNmiiTc8jddt0nkx_tgge3UH2zRvtw/exec?email=${email}&name=${name}&message=${message}`;
   const options = {
     method: "POST",
     mode: "cors",
     header: {
       "Content-Type": "applications/json",
+      'Accept': 'application/json'
     },
+    body: JSON.stringify({
+      name: name,
+      message: message
+    })
   };
 
   fetch(url, options)
+    .then(response => response.json())
     .then((response) => {
-      if (response.status == 200) {
+      if (response.result == 'success') {
         formButton.classList.remove("onclick");
         formButton.classList.add("validate");
         formButton.classList.item(450);
@@ -188,11 +194,11 @@ contactForm.addEventListener("submit", (e) => {
           formButton.classList.remove("validate");
         }, 2500);
 
-        // formSubmitResponse.style.animation = "success 4s forwards ease-out";
+        //formSubmitResponse.style.animation = "success 4s forwards ease-out";
         document.getElementById("contactEmail").value = "";
         document.getElementById("contactName").value = "";
         document.getElementById("contactMessage").value = "";
-      } else {}
+      }
     })
     .catch((err) => {
       console.log(err);
